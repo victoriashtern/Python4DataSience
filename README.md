@@ -25,4 +25,3 @@ Data analysis involves several key areas:
 These techniques help uncover complex patterns, automate processes, and develop systems that can learn from data and make predictions.
 
 
-GitHub will automatically render the headings, bold text, and bullet points in a readable format.
