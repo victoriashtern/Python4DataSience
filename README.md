@@ -24,7 +24,17 @@ Data analysis involves several key areas:
 
 These techniques help uncover complex patterns, automate processes, and develop systems that can learn from data and make predictions.
 
+## Python Development IDEs
+
+| IDE | Description |
+| --- | --- |
+| **Jupyter Notebook** | A web-based IDE that organizes each project into a notebook. Notebooks can include code cells, text, and explanations describing the operations performed. |
+| **JupyterLab** | An enhanced, web-based environment for working with Jupyter Notebooks, offering a more flexible interface for interactive development. |
+| **Visual Studio Code (VS Code)** | A Microsoft-developed code editor with support for debugging, version control, extensions, and other development tools. |
+
+
 ## Struture 
 
 - [Data Visualization Phases](data_visualization_phases.md)
+
 
