@@ -24,4 +24,7 @@ Data analysis involves several key areas:
 
 These techniques help uncover complex patterns, automate processes, and develop systems that can learn from data and make predictions.
 
+## Struture 
+
+- [Data Visualization Phases](data-analysis/dat_visualithation.md)
 
