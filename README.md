@@ -36,5 +36,7 @@ These techniques help uncover complex patterns, automate processes, and develop 
 ## Struture 
 
 - [Data Visualization Phases](data_visualization_phases.md)
+- [Data Modules](data_modules.md)
+  
 
 
