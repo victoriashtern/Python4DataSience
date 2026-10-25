@@ -91,11 +91,44 @@ Distribution plots visualize the distribution, frequency, and density of data.
 | lmplot() | FacetGrid | Regression plot with faceting | sns.lmplot() | 📈 |
 | residplot() | Axes | Residual plot | sns.residplot() | ± |
 
-# Parameters for Working with Subplots
+## 7 Parameters for Working with Subplots
 
 | Parameter | Description | Example |
 |---|---|---|
 | col | Specifies the column whose unique values determine how the data is divided into subplots. | sns.relplot(data=df, x='Age', y='Sales', col='Region') |
 | col_wrap | Specifies the maximum number of subplots per row before wrapping to the next row. Used with col in supported figure-level functions. | sns.relplot(data=df, x='Age', y='Sales', col='Region', col_wrap=3) |
+
+## 8  Axes Parameters: Ticks and Limits
+
+# The set() Method Parameters
+
+| Parameter | Description | Example | Graph Example |
+|---|---|---|---|
+| xticks | Specifies the locations of ticks on the x-axis. | ax.set(xticks=[1910, 1915, 1920, 1925, 1930]) | ↔️ X-axis tick positions |
+| yticks | Specifies the locations of ticks on the y-axis. | ax.set(yticks=[0, 500, 1000, 1500]) | ↕️ Y-axis tick positions |
+| xlim | Sets the lower and upper limits of the x-axis. | ax.set(xlim=(1910, 1930)) | ↔️ X-axis range |
+| ylim | Sets the lower and upper limits of the y-axis. | ax.set(ylim=(0, 1750)) | ↕️ Y-axis range |
+| title | Sets the plot title. | ax.set(title='Deaths by Age Group') | 📝 Chart title |
+| xlabel | Sets the x-axis label. | ax.set(xlabel='Year') | X → Year |
+| ylabel | Sets the y-axis label. | ax.set(ylabel='Deaths per 100,000') | Y → Death rate |
+
+#  The tick_params() Method
+
+| Parameter | Description | Example | Graph Example |
+|---|---|---|---|
+| axis | Specifies which axis to modify: 'x', 'y', or 'both'. | ax.tick_params(axis='x') | ↔️ X-axis ticks |
+| labelrotation | Rotates tick labels by the specified angle in degrees. | ax.tick_params(axis='x', labelrotation=30) | 🔄 Angled labels |
+| labelsize | Sets the font size of tick labels. | ax.tick_params(axis='both', labelsize=10) | 🔠 Label size |
+| labelcolor | Sets the color of tick labels. | ax.tick_params(axis='x', labelcolor='blue') | 🔵 Label color |
+| length | Sets the length of tick marks. | ax.tick_params(axis='both', length=5) | ┬ Tick length |
+| width | Sets the width of tick marks. | ax.tick_params(axis='both', width=1.5) | ┃ Tick thickness |
+| colors | Sets the color of both tick marks and tick labels. | ax.tick_params(axis='y', colors='red') | 🔴 Tick color |
+| direction | Sets the direction of ticks: 'in', 'out', or 'inout'. | ax.tick_params(axis='both', direction='in') | ↘ Tick direction |
+| grid_color | Sets the color of gridlines when gridline settings are enabled. | ax.tick_params(axis='y', grid_color='gray') | ▦ Gridline color |
+## Official Documentation
+
+- [Seaborn relplot()](https://seaborn.pydata.org/generated/seaborn.relplot.html)
+- [Matplotlib Axes.set()](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set.html)
+- [Matplotlib Axes.tick_params()](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html)
 
 
