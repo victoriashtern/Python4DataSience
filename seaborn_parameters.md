@@ -30,7 +30,7 @@ Plotting function is a tool that creates a graph and its parameters as the instr
 **Important:** These parameters are not universal. Their availability and behavior depend on the specific Seaborn function being used.
 
 
-# Seaborn Parameters — Examples
+## Examples
 
 ### 1. Create Sample Data
 Run this first; the examples below reuse df.
