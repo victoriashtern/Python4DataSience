@@ -75,5 +75,20 @@ Distribution plots visualize the distribution, frequency, and density of data.
 | pairplot() | PairGrid | Pairwise relationships | sns.pairplot() | ▦ |
 | jointplot() | JointGrid | Joint and marginal distributions | sns.jointplot() | ◉ |
 | regplot() | Axes | Regression plot | sns.regplot() | 📈 |
+
+## 5. Basic Seaborn Parameters
+
+| Parameter | Description |
+|---|---|
+| data | The DataFrame or other data source that provides the data for the plot. |
+| kind | Specifies the type of plot to create. |
+| x, y | Specify the columns to use for the x-axis and y-axis, respectively. |
+| hue | Specifies the column used to group data by category, assigning a different color to each category. |
+| palette | Specifies the color palette for the plot, such as colorblind, pastel, flare, or bright. The default is None. |
+| height | Sets the height of the plot in inches. The default is 5. Available for general plotting functions. |
+| aspect | Sets the ratio of the plot's width to its height. The width is calculated as aspect * height. Available for general plotting functions. |
+| legend | Controls how the legend is displayed. Options include 'auto' (default), 'brief', 'full', and False. Available for general plotting functions. |
 | lmplot() | FacetGrid | Regression plot with faceting | sns.lmplot() | 📈 |
 | residplot() | Axes | Residual plot | sns.residplot() | ± |
+
+
