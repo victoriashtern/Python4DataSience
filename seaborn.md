@@ -91,4 +91,11 @@ Distribution plots visualize the distribution, frequency, and density of data.
 | lmplot() | FacetGrid | Regression plot with faceting | sns.lmplot() | 📈 |
 | residplot() | Axes | Residual plot | sns.residplot() | ± |
 
+# Parameters for Working with Subplots
+
+| Parameter | Description | Example |
+|---|---|---|
+| `col` | Specifies the column whose unique values determine how the data is divided into subplots. | `sns.relplot(data=df, x='Age', y='Sales', col='Region')` |
+| `col_wrap` | Specifies the maximum number of subplots per row before wrapping to the next row. Used with `col` in supported figure-level functions. | `sns.relplot(data=df, x='Age', y='Sales', col='Region', col_wrap=3)` |
+
 
