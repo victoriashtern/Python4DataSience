@@ -42,6 +42,8 @@ These techniques help uncover complex patterns, automate processes, and develop 
 - [DataFrame](data_frame.md)
 - [Magic commands](magic_commands.md)
 - [data_visualization](data_visualization.md)
+- [Seaborn](seaborn.md)
+- 
 
 
   
