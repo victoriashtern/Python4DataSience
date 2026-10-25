@@ -1,5 +1,7 @@
 # Data Visualization Libraries
 Data visualization, also called data viz or data plotting, is the graphical representation of data to make it easier to interpret, understand  and tell story behind the data
+- [Chart Visualisation](data_visualization_phases.md](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html)
+- [Series Visualization](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.plot.html)
 
 | Library | Description |
 |---|---|
