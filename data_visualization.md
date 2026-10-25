@@ -1,4 +1,5 @@
 # Data Visualization Libraries
+Data visualization, also called data viz or data plotting, is the graphical representation of data to make it easier to interpret, understand  and tell story behind the data
 
 | Library | Description |
 |---|---|
