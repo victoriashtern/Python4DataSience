@@ -1,5 +1,6 @@
 
 # Seaborn Plotting Functions
+Seaborn is a Python data visualization library used to create attractive, informative statistical graphs. It is built on top of Matplotlib and works particularly well with Pandas DataFrame
 - [Seaborn API Reference](https://seaborn.pydata.org/api.html)
 - [Relational Plots](https://seaborn.pydata.org/tutorial/relational.html)
 - [Categorical Plots](https://seaborn.pydata.org/tutorial/categorical.html)
