@@ -1,4 +1,4 @@
-##  Plot Customization Methods
+## Seaborn Plot Customization Methods
 These methods are mainly Matplotlib functions used to customize plots created with Seaborn.
 
 | Category | Methods | Purpose |
