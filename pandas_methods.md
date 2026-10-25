@@ -4,6 +4,7 @@ Pandas is a Python library for data manipulation and analysis. Its methods help 
 
 ## Official Documentation
 
+- [General Functions](<https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html>)
 - [Official pandas documentation](<https://pandas.pydata.org/docs/>)
 - [Complete API reference](<https://pandas.pydata.org/docs/reference/index.html>)
 - [DataFrame methods and attributes](<https://pandas.pydata.org/docs/reference/frame.html>)
