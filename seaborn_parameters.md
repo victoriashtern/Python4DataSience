@@ -1,4 +1,6 @@
-##  Seaborn Parameters — Reference Table
+##  Seaborn Parameters
+Seaborn parameters are settings you pass to a Seaborn plotting function to control how a graph is created, what data it displays, and how it looks.
+Plotting function is a tool that creates a graph and its parameters as the instructions it was given.
 
 | Parameter | Purpose | Example |
 |---|---|---|
