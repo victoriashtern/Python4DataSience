@@ -5,49 +5,7 @@
 
 Seaborn is built on top of Matplotlib and works especially well with pandas DataFrames.
 
-## 1. Examples of Seaborn Plots
-
-### Scatter Plot
-Shows the relationship between two numerical variables.
-
-```python
-sns.scatterplot(data=df, x="Age", y="Sales")
-````
-
-### Bar Plot
-
-Compares estimated values across categories.
-
-python
-
-```
-sns.barplot(data=df, x="Region", y="Sales")
-```
-
-### Histogram
-
-Shows the frequency distribution of numerical data.
-
-python
-
-```
-sns.histplot(data=df, x="Sales")
-```
-
-## 2. Main Categories of Seaborn Plotting
-
-| Plot Category | Purpose | Example Function |
-| --- | --- | --- |
-| Relational | Show relationships between variables | `sns.scatterplot()` |
-| Categorical | Compare values across categories | `sns.barplot()` |
-| Distribution | Understand the distribution of data | `sns.histplot()` |
-| Regression | Show trends and fitted relationships | `sns.regplot()` |
-| Matrix | Display values using colors | `sns.heatmap()` |
-| Multivariate | Explore relationships among multiple variables | `sns.pairplot()` |
-
-## 3. Basic Steps to Create a Seaborn Plot
-
-python
+## Main Categories of Seaborn Plotting
 
 ```
 import seaborn as sns
@@ -65,25 +23,39 @@ plt.show()
 - `x="Age"` and `y="Sales"` — Specify the variables to visualize.
 - `plt.show()` — Displays the plot.
 
-In simple terms: Seaborn plotting means turning data into graphs so you can understand what the data tells you more easily.
+| Plot Category | Purpose |General Method | Example Function |
+| --- | --- | --- |--- |
+| Relational | relplot()| Show relationships between variables | `sns.scatterplot()` |
+| Categorical |catplot() | Compare values across categories | `sns.barplot()` |
+| Distribution |  displot() | Understand the distribution of data | `sns.histplot()` |
+| Regression |lmplot() | Show trends and fitted relationships | `sns.regplot()` |
+| Matrix | | Display values using colors | `sns.heatmap()` |
+| Multivariate | | Explore relationships among multiple variables | `sns.pairplot()` |
+
+### Scatter Plot
+Shows the relationship between two numerical variables.
 
 ```
+sns.scatterplot(data=df, x="Age", y="Sales")
+````
+
+### Bar Plot
+
+Compares estimated values across categories.
 
 ```
+sns.barplot(data=df, x="Region", y="Sales")
+```
 
+### Histogram
 
+Shows the frequency distribution of numerical data.
 
+```
+sns.histplot(data=df, x="Sales")
+```
 
-### General Explanation
-
-| Plot Family | General Method | Specific Method |
-|---|---|---|
-| Relational | relplot() | scatterplot(), lineplot() |
-| Categorical | catplot() | barplot(), countplot(), boxplot(), etc. |
-| Distribution | displot() | histplot(), kdeplot(), ecdfplot() |
-| Regression | lmplot() | regplot() is related but is a separate axes-level function |
-
-## 2. Seaborn Plotting Methods — Master Table
+## 2. Seaborn Plotting Methods
 
 | Family | General | Specific | Returns | Purpose | Example | Icon |
 |:--|:--|:--|:--|:--|:--|:--:|
@@ -117,5 +89,3 @@ In simple terms: Seaborn plotting means turning data into graphs so you can unde
 - **Regression:** regplot() draws a regression plot on an Axes; lmplot() supports regression plots with faceting.
 - **Returned objects:** The Returns column identifies the object returned by the specific method, or by the general method when the specific method is blank.
 - **Examples:** The examples assume df is a pandas DataFrame containing the required columns.
-
-*Note: relplot() and displot() return a FacetGrid; their specific plotting functions return an Axes.*
