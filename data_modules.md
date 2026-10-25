@@ -7,24 +7,24 @@ This guide summarizes Python modules and libraries commonly used in data analysi
 
 | Module / Library | Abbreviation | Purpose |
 | --- | --- | --- |
-| pandas | `pd` | Data manipulation, cleaning, and analysis using DataFrames. |
-| NumPy | `np` | Numerical computing, arrays, matrices, and mathematical operations. |
-| SciPy | `scipy` | Scientific computing, optimization, and statistical functions. |
-| Polars | `pl` | Fast DataFrame operations and data transformation. |
-| Dask | `dask` | Parallel and distributed computing for large datasets. |
-| xarray | `xr` | Working with labeled multidimensional datasets. |
+| pandas | pd | Data manipulation, cleaning, and analysis using DataFrames. |
+| NumPy | np | Numerical computing, arrays, matrices, and mathematical operations. |
+| SciPy | scipy | Scientific computing, optimization, and statistical functions. |
+| Polars | pl | Fast DataFrame operations and data transformation. |
+| Dask | dask | Parallel and distributed computing for large datasets. |
+| xarray | xr | Working with labeled multidimensional datasets. |
 
 ## 2\. Data Visualization
 
 | Module / Library | Abbreviation | Purpose |
 | --- | --- | --- |
-| Matplotlib | `plt` | Creating charts, graphs, and customized visualizations. |
-| Seaborn | `sns` | Statistical visualizations, including heatmaps and distribution plots. |
-| Plotly Express | `px` | Creating interactive charts and graphs. |
-| Plotly Graph Objects | `go` | Building detailed interactive visualizations. |
+| Matplotlib | plt | Creating charts, graphs, and customized visualizations. |
+| Seaborn | sns | Statistical visualizations, including heatmaps and distribution plots. |
+| Plotly Express | px | Creating interactive charts and graphs. |
+| Plotly Graph Objects | go | Building detailed interactive visualizations. |
 | Bokeh | — | Creating interactive visualizations for web browsers. |
-| Altair | `alt` | Declarative statistical visualization based on data columns. |
-| missingno | `msno` | Visualizing missing data in datasets. |
+| Altair | alt | Declarative statistical visualization based on data columns. |
+| missingno | msno | Visualizing missing data in datasets. |
 | Yellowbrick | — | Visualizing machine learning models and their performance. |
 
 ## 3\. Data Cleaning and Preparation
@@ -32,7 +32,7 @@ This guide summarizes Python modules and libraries commonly used in data analysi
 | Module / Library | Abbreviation | Purpose |
 | --- | --- | --- |
 | pyjanitor | — | Simplifying common DataFrame cleaning operations. |
-| Great Expectations | `gx` | Validating data quality and defining data expectations. |
+| Great Expectations | gx | Validating data quality and defining data expectations. |
 | Pandera | — | Validating DataFrame schemas and data types. |
 | chardet | — | Detecting probable text-file encodings. |
 | ftfy | — | Fixing common Unicode and text-encoding problems. |
@@ -44,37 +44,37 @@ This guide summarizes Python modules and libraries commonly used in data analysi
 | Module / Library | Abbreviation | Purpose |
 | --- | --- | --- |
 | statistics | — | Basic descriptive statistics, averages, and measures of spread. |
-| scipy.stats | `stats` | Statistical distributions, hypothesis testing, and probability calculations. |
-| statsmodels | `sm` | Statistical modeling, regression, and statistical tests. |
-| pingouin | `pg` | Statistical tests, effect sizes, and correlation analysis. |
+| scipy.stats | stats | Statistical distributions, hypothesis testing, and probability calculations. |
+| statsmodels | sm | Statistical modeling, regression, and statistical tests. |
+| pingouin | pg | Statistical tests, effect sizes, and correlation analysis. |
 | researchpy | — | Supporting statistical analysis and summary reporting. |
-| SymPy | `sympy` | Symbolic mathematics, algebra, and equation solving. |
+| SymPy | sympy | Symbolic mathematics, algebra, and equation solving. |
 
 ## 5\. Machine Learning and Predictive Analysis
 
 | Module / Library | Abbreviation | Purpose |
 | --- | --- | --- |
-| scikit-learn | `sklearn` | Classification, regression, clustering, and model evaluation. |
-| XGBoost | `xgb` | Gradient-boosted decision trees for predictive modeling. |
-| LightGBM | `lgb` | Efficient gradient boosting for structured datasets. |
+| scikit-learn | sklearn | Classification, regression, clustering, and model evaluation. |
+| XGBoost | xgb | Gradient-boosted decision trees for predictive modeling. |
+| LightGBM | lgb | Efficient gradient boosting for structured datasets. |
 | CatBoost | — | Gradient boosting with support for categorical features. |
-| TensorFlow | `tf` | Deep learning and neural network development. |
+| TensorFlow | tf | Deep learning and neural network development. |
 | Keras | — | Building and training neural networks through a high-level API. |
-| PyTorch | `torch` | Deep learning, tensor computation, and neural networks. |
-| imbalanced-learn | `imblearn` | Handling imbalanced classification datasets. |
-| Optuna | `optuna` | Hyperparameter optimization for machine learning models. |
-| SHAP | `shap` | Explaining machine learning model predictions. |
+| PyTorch | torch | Deep learning, tensor computation, and neural networks. |
+| imbalanced-learn | imblearn | Handling imbalanced classification datasets. |
+| Optuna | optuna | Hyperparameter optimization for machine learning models. |
+| SHAP | shap | Explaining machine learning model predictions. |
 | Prophet | — | Forecasting time series data. |
 
 ## 6\. Time Series Analysis
 
 | Module / Library | Abbreviation | Purpose |
 | --- | --- | --- |
-| datetime | `dt`\* | Working with dates, times, and time intervals. |
+| datetime | dt\* | Working with dates, times, and time intervals. |
 | time | — | Working with timestamps, elapsed time, and time-related operations. |
 | dateutil | — | Parsing dates and performing flexible date calculations. |
 | pandas.tseries | — | Date offsets, business calendars, and time series utilities. |
-| statsmodels.tsa | `tsa` | Time series modeling, decomposition, and forecasting. |
+| statsmodels.tsa | tsa | Time series modeling, decomposition, and forecasting. |
 | sktime | — | Machine learning for time series forecasting and analysis. |
 | ruptures | — | Detecting change points in time series data. |
 
@@ -92,10 +92,10 @@ This guide summarizes Python modules and libraries commonly used in data analysi
 | zipfile | — | Creating, reading, and extracting ZIP archives. |
 | gzip | — | Reading and writing gzip-compressed files. |
 | io | — | Working with in-memory streams and file-like objects. |
-| openpyxl | — | Reading and writing Excel `.xlsx` files. |
-| XlsxWriter | — | Creating and formatting Excel `.xlsx` files. |
+| openpyxl | — | Reading and writing Excel .xlsx files. |
+| XlsxWriter | — | Creating and formatting Excel .xlsx files. |
 | pyreadstat | — | Reading and writing statistical files, including SAS, SPSS, and Stata formats. |
-| pyarrow | `pa` | Working with Apache Arrow and columnar data formats. |
+| pyarrow | pa | Working with Apache Arrow and columnar data formats. |
 | fastparquet | — | Reading and writing Parquet files. |
 
 ## 8\. Databases and Data Access
@@ -103,7 +103,7 @@ This guide summarizes Python modules and libraries commonly used in data analysi
 | Module / Library | Abbreviation | Purpose |
 | --- | --- | --- |
 | sqlite3 | — | Connecting to and querying SQLite databases. |
-| SQLAlchemy | `sa` | Connecting to databases and working with SQL through a Python toolkit. |
+| SQLAlchemy | sa | Connecting to databases and working with SQL through a Python toolkit. |
 | psycopg | — | Connecting to PostgreSQL databases. |
 | pymysql | — | Connecting to MySQL databases. |
 | duckdb | — | Running analytical SQL queries on local files and datasets. |
@@ -111,14 +111,14 @@ This guide summarizes Python modules and libraries commonly used in data analysi
 | requests | — | Sending HTTP requests to web services and APIs. |
 | urllib | — | Working with URLs and retrieving web resources. |
 | httpx | — | Making synchronous and asynchronous HTTP requests. |
-| Beautiful Soup (`bs4`) | `bs4` | Parsing HTML and extracting information from web pages. |
+| Beautiful Soup (bs4) | bs4 | Parsing HTML and extracting information from web pages. |
 | lxml | — | Parsing and processing XML and HTML documents. |
 
 ## 9\. Geographic and Spatial Analysis
 
 | Module / Library | Abbreviation | Purpose |
 | --- | --- | --- |
-| GeoPandas | `gpd` | Analyzing geographic data using spatial DataFrames. |
+| GeoPandas | gpd | Analyzing geographic data using spatial DataFrames. |
 | Shapely | — | Creating and manipulating geometric objects. |
 | Fiona | — | Reading and writing geographic vector data formats. |
 | Rasterio | — | Reading and processing raster and geospatial image data. |
@@ -139,7 +139,7 @@ This guide summarizes Python modules and libraries commonly used in data analysi
 
 | Module / Library | Abbreviation | Purpose |
 | --- | --- | --- |
-| PySpark | `pyspark` | Distributed data processing using Apache Spark. |
+| PySpark | pyspark | Distributed data processing using Apache Spark. |
 | Apache Beam | — | Building batch and streaming data processing pipelines. |
 | Prefect | — | Orchestrating and monitoring data workflows. |
 | Airflow | — | Scheduling and managing data pipelines. |
@@ -163,7 +163,7 @@ This guide summarizes Python modules and libraries commonly used in data analysi
 | multiprocessing | — | Running computations across multiple processes. |
 | pytest | — | Testing data-processing functions and Python code. |
 
-\* `dt` is a user-defined alias sometimes used for `datetime`; it is not a standard import abbreviation.
+\* dt is a user-defined alias sometimes used for datetime; it is not a standard import abbreviation.
 
 ## Recommended Starting Libraries
 
@@ -180,7 +180,7 @@ If you are learning practical data analysis, start with these libraries before m
 
 ## Notes
 
-- Some entries are built-in Python modules, such as `csv`, `json`, `statistics`, and `datetime`.
+- Some entries are built-in Python modules, such as csv, json, statistics, and datetime.
 - Other libraries are third-party packages that must be installed separately.
 - Import aliases are conventions rather than fixed names.
 - Not every library is necessary for every project. Choose tools according to your data sources, analytical questions, and project requirements.
