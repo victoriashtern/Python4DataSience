@@ -76,6 +76,3 @@ Distribution plots visualize the distribution, frequency, and density of data.
 | regplot() | Axes | Regression plot | sns.regplot() | 📈 |
 | lmplot() | FacetGrid | Regression plot with faceting | sns.lmplot() | 📈 |
 | residplot() | Axes | Residual plot | sns.residplot() | ± |
-
-
-**Note:** Symbols are illustrative Unicode characters or emoji, not actual rendered graph previews.
