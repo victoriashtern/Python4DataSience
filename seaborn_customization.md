@@ -3,14 +3,14 @@ These methods are mainly Matplotlib functions used to customize plots created wi
 
 | Category | Methods | Purpose |
 |---|---|---|
-| Figure layout | `plt.subplots()`, `figsize`, `subplots_adjust()` | Control figure size and spacing |
-| Titles and labels | `set_title()`, `set_xlabel()`, `set_ylabel()` | Add titles and axis labels |
-| Axis limits | `set_xlim()`, `set_ylim()` | Control visible ranges |
-| Ticks | `set_xticks()`, `set_yticks()`, `tick_params()` | Customize tick positions and appearance |
-| Annotations | `annotate()` | Highlight specific data points |
-| Style | `sns.set_style()` | Change backgrounds and grid appearance |
-| Colors | `sns.color_palette()`, `sns.set_palette()` | Choose color palettes |
-| Saving | `savefig()` | Export a figure to a file |
+| Figure layout |plt.subplots(),figsize,subplots_adjust() | Control figure size and spacing |
+| Titles and labels |set_title(),set_xlabel(),set_ylabel() | Add titles and axis labels |
+| Axis limits |set_xlim(),set_ylim() | Control visible ranges |
+| Ticks |set_xticks(),set_yticks(),tick_params() | Customize tick positions and appearance |
+| Annotations |annotate() | Highlight specific data points |
+| Style |sns.set_style() | Change backgrounds and grid appearance |
+| Colors |sns.color_palette(),sns.set_palette() | Choose color palettes |
+| Saving |savefig() | Export a figure to a file |
 
 
 ## Examples
@@ -19,9 +19,9 @@ These methods are mainly Matplotlib functions used to customize plots created wi
 
 ### 1. Prepare the Data
 
-Run this setup first. The following examples reuse `df`.
+Run this setup first. The following examples reusedf.
 
-```python
+```
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -46,10 +46,8 @@ plt.show()
 
 ### 3. Titles and Labels
 Use set_title(), set_xlabel(), and set_ylabel() to add a title and axis labels.
-
 ```
 fig, ax = plt.subplots()
-
 sns.scatterplot(data=df, x="Age", y="Sales", ax=ax)
 
 ax.set_title("Age vs. Sales")
@@ -63,7 +61,6 @@ plt.show()
 Use set_xlim() and set_ylim() to control the visible ranges of the axes.
 ```
 fig, ax = plt.subplots()
-
 sns.scatterplot(data=df, x="Age", y="Sales", ax=ax)
 
 ax.set_xlim(20, 50)
@@ -71,15 +68,14 @@ ax.set_ylim(150, 500)
 
 plt.show()
 ```
+
 - set_xlim(20, 50) — Displays x-axis values from 20 to 50.
 - set_ylim(150, 500) — Displays y-axis values from 150 to 500.
 
 ### 5. Ticks
 Use set_xticks(), set_yticks(), and tick_params() to customize axis tick positions and appearance.
-
 ```
 fig, ax = plt.subplots()
-
 sns.scatterplot(data=df, x="Age", y="Sales", ax=ax)
 
 ax.set_xticks([20, 30, 40, 50])
@@ -94,10 +90,8 @@ plt.show()
 
 ### 6. Annotations
 Use annotate() to highlight a particular data point with text and an arrow.
-
 ```
 fig, ax = plt.subplots()
-
 sns.scatterplot(data=df, x="Age", y="Sales", ax=ax)
 
 ax.annotate(
@@ -109,6 +103,7 @@ ax.annotate(
 
 plt.show()
 ```
+
 - xy=(45, 450) — Specifies the point to highlight.
 - xytext=(32, 430) — Specifies where the annotation text appears.
 - arrowprops — Controls the arrow's appearance.
@@ -116,16 +111,13 @@ plt.show()
 
 ### 7.Style
 Use sns.set_style() to change the background and grid appearance.
-
 ```
 sns.set_style("whitegrid")
-
 sns.scatterplot(data=df, x="Age", y="Sales")
 
 plt.show()
 ```
 Common styles:
-
 - "whitegrid" — White background with grid lines.
 - "darkgrid" — Gray background with grid lines.
 - "white" — White background without grid lines.
@@ -136,7 +128,6 @@ Common styles:
 Use sns.color_palette() to retrieve a palette and sns.set_palette() to set the default palette for subsequent Seaborn plots.
 ```
 sns.set_palette("Set2")
-
 sns.scatterplot(
     data=df,
     x="Age",
@@ -155,9 +146,7 @@ sns.color_palette("Set2")
 
 ### 9. Saving a Figure
 Use savefig() to save a plot to an image file.
-
-
-``` python
+```
 fig, ax = plt.subplots(figsize=(8, 5))
 sns.scatterplot(data=df, x="Age", y="Sales", ax=ax)
 ax.set_title("Age vs. Sales")
