@@ -7,7 +7,7 @@ Seaborn is built on top of Matplotlib and works especially well with pandas Data
 
 ## Main Categories of Seaborn Plotting
 
-```
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -16,44 +16,44 @@ sns.scatterplot(data=df, x="Age", y="Sales")
 
 # Display the plot
 plt.show()
-```
 
-- `import seaborn as sns` — Imports the Seaborn library.
-- `data=df` — Specifies the DataFrame containing your data.
-- `x="Age"` and `y="Sales"` — Specify the variables to visualize.
-- `plt.show()` — Displays the plot.
+
+- import seaborn as sns — Imports the Seaborn library.
+- data=df — Specifies the DataFrame containing your data.
+- x="Age" and y="Sales" — Specify the variables to visualize.
+- plt.show() — Displays the plot.
 
 | Plot Category | Purpose |General Method | Example Function |
 | --- | --- | --- |--- |
-| Relational | relplot()| Show relationships between variables | `sns.scatterplot()` |
-| Categorical |catplot() | Compare values across categories | `sns.barplot()` |
-| Distribution |  displot() | Understand the distribution of data | `sns.histplot()` |
-| Regression |lmplot() | Show trends and fitted relationships | `sns.regplot()` |
-| Matrix | | Display values using colors | `sns.heatmap()` |
-| Multivariate | | Explore relationships among multiple variables | `sns.pairplot()` |
+| Relational | relplot()| Show relationships between variables | sns.scatterplot() |
+| Categorical |catplot() | Compare values across categories | sns.barplot() |
+| Distribution |  displot() | Understand the distribution of data | sns.histplot() |
+| Regression |lmplot() | Show trends and fitted relationships | sns.regplot() |
+| Matrix | | Display values using colors | sns.heatmap() |
+| Multivariate | | Explore relationships among multiple variables | sns.pairplot() |
 
 ### Scatter Plot
 Shows the relationship between two numerical variables.
 
-```
+
 sns.scatterplot(data=df, x="Age", y="Sales")
-````
+
 
 ### Bar Plot
 
 Compares estimated values across categories.
 
-```
+
 sns.barplot(data=df, x="Region", y="Sales")
-```
+
 
 ### Histogram
 
 Shows the frequency distribution of numerical data.
 
-```
+
 sns.histplot(data=df, x="Sales")
-```
+
 
 ## 2. Seaborn Plotting Methods
 
