@@ -115,3 +115,104 @@ print(df)
 | json.load() | Loads JSON from an open file into Python objects. | json.load(file) |
 | json.loads() | Parses a JSON string into Python objects. | json.loads(json_string) |
 
+
+###  `pd.read_json()`
+
+Reads a JSON file and converts its records into a Pandas DataFrame.
+
+**File: `employees.json`**
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "department": "IT",
+    "salary": 65000
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "department": "Finance",
+    "salary": 70000
+  }
+]
+```
+
+**Python example:**
+
+```python
+import pandas as pd
+
+df = pd.read_json("employees.json")
+
+print(df)
+```
+
+**Output:**
+
+| id | name | department | salary |
+|---:|---|---|---:|
+| 1 | Alice | IT | 65000 |
+| 2 | Bob | Finance | 70000 |
+
+### 2. `json.load()`
+
+Reads JSON data from an open file and converts it into Python objects, such as a list or dictionary.
+
+**Python example:**
+
+```python
+import json
+
+with open("employees.json", "r") as file:
+    employees = json.load(file)
+
+print(employees)
+print(employees[0]["name"])
+```
+
+**Output:**
+
+```text
+[{'id': 1, 'name': 'Alice', 'department': 'IT', 'salary': 65000}, ...]
+Alice
+```
+
+- `open()` opens the JSON file.
+- `json.load(file)` parses the contents.
+- `employees` becomes a Python list containing dictionaries.
+
+### 3. `json.loads()`
+
+Parses a JSON-formatted string into Python objects. Use `loads()` when the JSON data is already stored in a string.
+
+**Python example:**
+
+```
+import json
+
+json_string = """
+{
+    "id": 1,
+    "name": "Alice",
+    "department": "IT",
+    "salary": 65000
+}
+"""
+
+employee = json.loads(json_string)
+
+print(employee)
+print(employee["name"])
+```
+
+**Output:**
+
+```text
+{'id': 1, 'name': 'Alice', 'department': 'IT', 'salary': 65000}
+Alice
+```
+
+
+
