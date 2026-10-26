@@ -55,7 +55,7 @@ Seaborn is commonly used for:
 
 ## Contents
 
-1. [Plot Types](seaborn_plot_types.md)
+1. [Plot Types](seaborn_types.md)
 2. [Plot Parameters](seaborn_parameters.md)
 3. [Plot Customization](seaborn_customization.md)
 4. [Saving Figures](seaborn_save_plots.md)
