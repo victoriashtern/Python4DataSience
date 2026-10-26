@@ -6,6 +6,18 @@ Data analysis involves several key areas:
 - **Data Visualization (Data Viz):** Presenting data through charts, graphs, and other visual formats to make information easier to understand and communicate. Data visualization is an essential part of data analysis because it often reveals insights that may not be immediately apparent in raw data.
 - **Data Modeling (Predictive Analysis):** Using historical data to develop models that identify patterns and predict possible future outcomes.
 
+## Structire
+
+- [Data Visualization Phases](data_visualization_phases.md)
+- [Data Modules](data_modules.md)
+- [Installing modules](installing_modules.md)
+- [import_data](import_data.md)
+- [Panda methods](pandas_methods.md)
+- [DataFrame](data_frame.md)
+- [Magic commands](magic_commands.md)
+- [data_visualization](data_visualization.md)
+- [Seaborn](seaborn.md)
+
 
 ## Analytics
 
@@ -31,21 +43,5 @@ These techniques help uncover complex patterns, automate processes, and develop 
 | **Jupyter Notebook** | A web-based IDE that organizes each project into a notebook. Notebooks can include code cells, text, and explanations describing the operations performed. |
 | **JupyterLab** | An enhanced, web-based environment for working with Jupyter Notebooks, offering a more flexible interface for interactive development. |
 | **Visual Studio Code (VS Code)** | A Microsoft-developed code editor with support for debugging, version control, extensions, and other development tools. |
-
-
-## Struture 
-
-- [Data Visualization Phases](data_visualization_phases.md)
-- [Data Modules](data_modules.md)
-- [Installing modules](installing_modules.md)
-- [Panda methods](pandas_methods.md)
-- [DataFrame](data_frame.md)
-- [Magic commands](magic_commands.md)
-- [data_visualization](data_visualization.md)
-- [Seaborn](seaborn.md)
-- 
-
-
-  
 
 
