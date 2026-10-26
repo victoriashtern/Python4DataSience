@@ -46,9 +46,7 @@ Use pd.read_csv() with the URL of the CSV file.
 import pandas as pd
 
 mortality_url = "https://www.murach.com/python_analysis/mortality.csv"
-
 mortality_data = pd.read_csv(mortality_url)
-
 print(mortality_data.head())
 ```
 
