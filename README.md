@@ -6,17 +6,19 @@ Data analysis involves several key areas:
 - **Data Visualization (Data Viz):** Presenting data through charts, graphs, and other visual formats to make information easier to understand and communicate. Data visualization is an essential part of data analysis because it often reveals insights that may not be immediately apparent in raw data.
 - **Data Modeling (Predictive Analysis):** Using historical data to develop models that identify patterns and predict possible future outcomes.
 
-## Structire
+## Structure
 
 - [Data Visualization Phases](data_visualization_phases.md)
 - [Data Modules](data_modules.md)
 - [Installing modules](installing_modules.md)
-- [import_data](import_data.md)
 - [Panda methods](pandas_methods.md)
+- [import_data](import_data.md)
+- [Jason Data](json_file.md)
 - [DataFrame](data_frame.md)
 - [Magic commands](magic_commands.md)
 - [data_visualization](data_visualization.md)
 - [Seaborn](seaborn.md)
+
 
 
 ## Analytics
