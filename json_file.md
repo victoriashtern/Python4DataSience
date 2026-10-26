@@ -1,4 +1,3 @@
-# JSON File Example
 
 ## 1. What Is a JSON File?
 
@@ -115,7 +114,4 @@ print(df)
 | pd.read_json() | Reads JSON data into a DataFrame when its structure is supported. | pd.read_json("employees.json") |
 | json.load() | Loads JSON from an open file into Python objects. | json.load(file) |
 | json.loads() | Parses a JSON string into Python objects. | json.loads(json_string) |
-
-## Official Documentation
-
 
