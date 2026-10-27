@@ -90,6 +90,9 @@ The goal is to apply the approved cleaning rules while preserving valid and usef
 - Impute missing values using an appropriate method when necessary.
 - Preserve meaningful categories, such as `"Not applicable"`, when they represent valid information.
 
+  **Solution:**  - 
+- [Handling Missing Values](panda_missing_values.md) 
+
 ### 7\. Correct Data Types and Formats
 
 - Convert columns to appropriate data types.
