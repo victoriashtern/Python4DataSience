@@ -3,11 +3,12 @@
 
 Data cleaning is the process of identifying, investigating, and correcting data quality issues to make a dataset reliable and suitable for analysis. The process combines Exploratory Data Analysis (EDA), data cleaning, and validation.
 
-The data analyst or data scientist is generally responsible for assessing data quality, deciding which cleaning actions are appropriate, and documenting the decisions. These decisions should be guided by the project objectives, business requirements, available documentation, and evidence from the dataset. When the meaning or importance of a variable is unclear, the analyst should consult relevant stakeholders or domain experts.
+The data analyst or data scientist is generally responsible for assessing data quality, deciding which cleaning actions are appropriate, and documenting the decisions. These decisions should be guided by the project objectives, business requirements, available documentation, and evidence from the dataset. When the meaning or importance of a variable is unclear, the analyst should consult relevant stakeholders or domain experts. In this phase Data visualization is heavily integrated into the broader exploration phase—specifically  such as using tools like histograms, box plots, and scatter plots are used to identify patterns, outliers, and data quality issues (Seaborn, MathLib and Plot methods are used)
 
 ## Phase 1: Understand and Explore the Data (EDA)
 
 The goal is to understand the dataset, explore its characteristics, and identify potential data quality issues before making changes.
+This initial step focuses primarily on reviewing documentation, data dictionaries, schema definitions, and business requirements rather than looking at charts.
 
 ### 1\. Understand the Dataset and Project Objectives
 - Review the dataset's source, documentation, and data dictionary.
@@ -18,6 +19,7 @@ The goal is to understand the dataset, explore its characteristics, and identify
 
 **Outcome:** A clear understanding of the dataset, its purpose, and the requirements it must satisfy.
 
+
 ### 2\. Inspect the Data Structure
 - Examine the number of rows and columns.
 - Review column names and data types.
@@ -26,6 +28,10 @@ The goal is to understand the dataset, explore its characteristics, and identify
 - Identify columns that may require renaming, conversion, or further investigation.
 
 **Outcome:** An understanding of the dataset's structure and potential structural problems.
+**Solution:**  - 
+- [panda.info()](panda_info.md) 
+- When to use: Immediately after loading the dataset.
+- What it does: Prints a concise summary of the DataFrame, including the total number of rows and columns, column names, non-null counts, and data types (int64, float64, object, etc.). It gives you a quick snapshot of potential data type errors and missing data.
 
 ### 3\. Explore Data Quality and Distributions
 - Calculate summary statistics for numerical variables.
@@ -36,6 +42,16 @@ The goal is to understand the dataset, explore its characteristics, and identify
 - Compare observed values against documented business rules and expected ranges.
 
 **Outcome:** A list of potential data quality issues that require investigation.
+**Solution:**  - 
+- [df.isnull() (or isna())](panda_info.md) 
+- When to use: When checking for missing values.
+- What it does: Returns a boolean DataFrame indicating whether values are missing. Combined with .sum() (df.isnull().sum()), it gives you the exact count of missing values per column.
+- [panda.count()](panda_count.md) 
+- When to use: To check non-missing data volume.
+- What it does: Counts the number of non-null (valid) entries for each column, which helps you quickly compare total rows against valid rows.
+- [panda.nunique()](panda_nuniqe.md) 
+- When to use: When analyzing categorical columns, identifiers, or low-cardinality numerical columns.
+- What it does: Counts the number of unique values in each column. This helps identify columns with only one unique value (useless for analysis) or unique IDs that shouldn't have duplicates.
 
 ## Phase 2: Decide What Needs Cleaning
 
