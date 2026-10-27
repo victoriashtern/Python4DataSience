@@ -14,7 +14,7 @@ Data analysis involves several key areas:
 - [Panda methods](pandas_methods.md)
 - [import_data](import_data.md)
 - [Jason Data](json_file.md)
-- [Data Cleaning](data_cleanining_plan.md)
+- [Data Cleaning](/cleaning/Readme.md)
 - [DataFrame](data_frame.md)
 - [Magic commands](magic_commands.md)
 - [data_visualization](data_visualization.md)
