@@ -10,9 +10,6 @@ The data analyst or data scientist is generally responsible for assessing data q
 The goal is to understand the dataset, explore its characteristics, and identify potential data quality issues before making changes.
 
 ### 1\. Understand the Dataset and Project Objectives
-
-The data analyst or data scientist should:
-
 - Review the dataset's source, documentation, and data dictionary.
 - Understand what each row represents and what each column measures.
 - Clarify the project's objectives and the questions the analysis must answer.
@@ -22,9 +19,6 @@ The data analyst or data scientist should:
 **Outcome:** A clear understanding of the dataset, its purpose, and the requirements it must satisfy.
 
 ### 2\. Inspect the Data Structure
-
-The data analyst or data scientist should:
-
 - Examine the number of rows and columns.
 - Review column names and data types.
 - Inspect sample records to understand how values are represented.
@@ -34,9 +28,6 @@ The data analyst or data scientist should:
 **Outcome:** An understanding of the dataset's structure and potential structural problems.
 
 ### 3\. Explore Data Quality and Distributions
-
-The data analyst or data scientist should:
-
 - Calculate summary statistics for numerical variables.
 - Examine the frequency and distribution of categorical variables.
 - Measure missing values and identify duplicate records.
@@ -51,9 +42,6 @@ The data analyst or data scientist should:
 Before modifying the DataFrame, the data analyst or data scientist should evaluate the identified issues and determine which actions are justified.
 
 ### 4\. Evaluate Columns and Records
-
-The data analyst or data scientist should:
-
 - Identify irrelevant columns that do not contribute to the project's objectives.
 - Identify redundant columns that duplicate information or provide no additional useful information.
 - Identify rows that fall outside the scope of the analysis.
