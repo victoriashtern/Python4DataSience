@@ -1,7 +1,3 @@
-Here is the complete updated Page 2 – Seaborn Plot Types in Markdown format, including the revised summary table with graph symbols.
-
-Writing
-
 # Seaborn Plot Types
 
 ## 1\. Introduction
