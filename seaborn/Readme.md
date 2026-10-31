@@ -16,7 +16,7 @@ Its key features include:
 
 - [Seaborn Website](https://seaborn.pydata.org/)
 - [Tuorial](https://seaborn.pydata.org/tutorial.html)
-- [Seaborn API Reference](https://seaborn.pydata.org/api.html)
+- [API Reference](https://seaborn.pydata.org/api.html)
 
 ## Contents
 
