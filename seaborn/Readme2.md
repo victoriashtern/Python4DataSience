@@ -27,10 +27,10 @@ The official Seaborn documentation provides tutorials, API references, examples,
 -  [Official Website:](<https://seaborn.pydata.org/>) - Seaborn Documentation
 -  [Tutorial](https://seaborn.pydata.org/tutorial.html)  - Introduces Seaborn concepts and explains how to create different types of visualizations 
 -  [API Reference:](https://seaborn.pydata.org/api.html) -Provides detailed information about Seaborn functions, parameters, and methods.
--  [Graph Types](seaborn/graph_types.md) - Covers relational, categorical, distribution, regression, and matrix plots   
--  [Graph Parameters](seaborn/parameters.md) Explains the different arguments and parameters available for creating plots.
--  [Plot Customization](seaborn/customization.md)  - Describes how to customize colors, styles, themes, labels, and other visual elements.
--  [Saving Figures](seaborn/save.md) Explains how to save visualizations in different file formats.    
+-  [Graph Types](graph_types.md) - Covers relational, categorical, distribution, regression, and matrix plots   
+-  [Graph Parameters](parameters.md) Explains the different arguments and parameters available for creating plots.
+-  [Plot Customization](customization.md)  - Describes how to customize colors, styles, themes, labels, and other visual elements.
+-  [Saving Figures](save.md) Explains how to save visualizations in different file formats.    
 - **Runnable Examples:** Provides practical examples that demonstrate Seaborn functionality.
 
 ### Seaborn and Related Libraries
