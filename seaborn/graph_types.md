@@ -1,5 +1,5 @@
 
-# Seaborn Types
+# Seaborn Graph Types
 
 **Seaborn plotting** is the process of creating statistical graphs and visualizations in Python using the Seaborn library. It helps you explore data, identify patterns, compare groups, and understand relationships between variables.
 Seaborn is built on top of Matplotlib and works especially well with pandas DataFrames.
