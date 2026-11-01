@@ -1,4 +1,4 @@
-# Importing Data with Pandas
+# Importing Data from files with Pandas
 
 Pandas provides functions for importing data from different file formats, websites, and databases into a DataFrame.
 - [Pandas Input/Output Guide](<https://pandas.pydata.org/docs/user_guide/io.html>)
