@@ -20,7 +20,7 @@ Pandas is a Python library for data manipulation and analysis. This reference or
 | Category | Common Methods | Purpose |
 | --- | --- | --- |
 | [import_data](import) | [pd.read_csv()](import/file.md)  ,  [pd.read_excel()](import/file.md) , [pd.read_json()](import/file.md), [pd.read_sql()](import/database.md)   | Load data from files and databases. |
-| Inspect data | head(), tail(), sample(), info(), describe() | Preview and summarize data. |
+| Inspect data | pd.head(), pd.tail(), pd.sample(), [pd.info()](cleaning/panda_info.md)  , pd.describe(),pd.size,pd.shape | Preview and summarize data. |
 | Select data | loc[], iloc[], query(), filter() | Select rows and columns. |
 | [Data Cleaning](/cleaning/Readme.md)  | drop(), dropna(), fillna(), replace(), drop_duplicates() | Remove or correct unwanted data. |
 | Data types | astype(), convert_dtypes(), pd.to_numeric(), pd.to_datetime() | Convert data into appropriate types. |
