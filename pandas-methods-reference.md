@@ -21,8 +21,8 @@ Pandas is a Python library for data manipulation and analysis. This reference or
 
 | Category | Common Methods | Purpose |
 | --- | --- | --- |
-| Import Data | `pd.read_csv()`, `pd.read_excel()`, `pd.read_json()`, `pd.read_sql()` | Load data from files and databases. |
-| Inspect Data | `df.head()`, `df.tail()`, `df.sample()`, `df.info()`, `df.describe()`, `df.size`, `df.shape` | Preview and summarize data. |
+|  [Import Data](import) | `pd.read_csv()`, `pd.read_excel()`, `pd.read_json()`, `pd.read_sql()` | Load data from files and databases. |
+| Inspect Data  | `df.head()`, `df.tail()`, `df.sample()`, `df.info()`, `df.describe()`, `df.size`, `df.shape` | Preview and summarize data. |
 | Select Data | `loc[]`, `iloc[]`, `query()`, `filter()` | Select rows and columns. |
 | Data Cleaning | `drop()`, `dropna()`, `fillna()`, `replace()`, `drop_duplicates()` | Remove or correct unwanted data. |
 | Data Types | `astype()`, `convert_dtypes()`, `pd.to_numeric()`, `pd.to_datetime()` | Convert data into appropriate types. |
@@ -32,7 +32,7 @@ Pandas is a Python library for data manipulation and analysis. This reference or
 | Combine Data | `merge()`, `join()`, `concat()` | Combine datasets. |
 | Reshape Data | `pivot()`, `pivot_table()`, `melt()`, `stack()`, `unstack()` | Change the layout of datasets. |
 | Index Management | `reset_index()`, `set_index()`, `reindex()` | Set, reset, and reorganize DataFrame indexes. |
-| Analyze Values | `value_counts()`, `nunique()`, `unique()`, `duplicated()`, `corr()` | Examine frequencies, uniqueness, and relationships. |
+|  [Analyze Values](pandas-value-analysis.md)  | `value_counts()`, `nunique()`, `unique()`, `duplicated()`, `corr()` | Examine frequencies, uniqueness, and relationships. |
 | Handle Missing Values | `isna()`, `notna()`, `dropna()`, `fillna()`, `interpolate()` | Identify and handle missing data. |
 | Work with Strings | `str.lower()`, `str.upper()`, `str.strip()`, `str.replace()`, `str.contains()` | Clean and search text. |
 | Work with Dates | `dt.year`, `dt.month`, `dt.day`, `resample()`, `shift()` | Extract date components and analyze time series. |
