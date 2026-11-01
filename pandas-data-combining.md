@@ -1,7 +1,10 @@
 
+
 # Pandas Data Combining
 
 Pandas provides three main methods for combining DataFrames: `merge()`, `join()`, and `concat()`.
+
+These methods allow you to combine datasets using common columns, indexes, or by adding rows and columns.
 
 ## 1\. Official Documentation
 
@@ -202,23 +205,47 @@ text
 
 ## 5\. concat() – Combine Rows or Columns
 
-Use `concat()` to combine multiple DataFrames vertically or horizontally.
+Use `concat()` to combine two or more DataFrames.
+
+### Understanding axis
+
+| Parameter | Meaning |
+| --- | --- |
+| `axis=0` | Add rows (vertical). |
+| `axis=1` | Add columns (horizontal). |
 
 ### A. Vertical – Add Rows
-
-Use `axis=0` (default).
 
 python
 
 ```python
-df1 = pd.DataFrame({
-    "name": ["John", "Mary"]
-})
+df1 = pd.DataFrame({"name": ["John", "Mary"]})
+df2 = pd.DataFrame({"name": ["David", "Anna"]})
 
-df2 = pd.DataFrame({
-    "name": ["David", "Anna"]
-})
+result = pd.concat([df1, df2], axis=0)
 
+print(result)
+```
+
+**Output:**
+
+text
+
+```text
+    name
+0   John
+1   Mary
+0  David
+1   Anna
+```
+
+Notice that the original indexes are repeated.
+
+Use `ignore_index=True` to create new sequential indexes.
+
+python
+
+```python
 result = pd.concat([df1, df2], ignore_index=True)
 
 print(result)
@@ -236,22 +263,15 @@ text
 3   Anna
 ```
 
-The rows from `df2` are added below the rows from `df1`.
-
 ### B. Horizontal – Add Columns
 
-Use `axis=1`.
+Use `axis=1` to add columns beside each other.
 
 python
 
 ```python
-df1 = pd.DataFrame({
-    "name": ["John", "Mary", "David"]
-})
-
-df2 = pd.DataFrame({
-    "salary": [4000, 5000, 6000]
-})
+df1 = pd.DataFrame({"name": ["John", "Mary"]})
+df2 = pd.DataFrame({"salary": [4000, 5000]})
 
 result = pd.concat([df1, df2], axis=1)
 
@@ -266,10 +286,14 @@ text
     name  salary
 0   John    4000
 1   Mary    5000
-2  David    6000
 ```
 
-The columns from `df2` are added beside the columns from `df1`.
+**Important Notes:**
+
+- `axis=0` combines rows.
+- `axis=1` combines columns.
+- `ignore_index=True` creates new index labels when combining rows.
+- When combining columns, pandas matches rows using their indexes.
 
 ## 6\. Difference Between the Three Methods
 
@@ -284,9 +308,8 @@ The columns from `df2` are added beside the columns from `df1`.
 - `merge()` and `concat()` are pandas functions.
 - `join()` is a DataFrame method.
 - These methods return a new DataFrame.
-- Use `ignore_index=True` with `concat()` to create a new sequential index.
-- `join()` and horizontal `concat()` align data using indexes.
 - Check for missing values and duplicate records after combining datasets.
+- Use `ignore_index=True` when you want a new sequential row index after concatenation.
 
 ## Additional Resources
 
@@ -294,11 +317,3 @@ The columns from `df2` are added beside the columns from `df1`.
 - [merge()](<https://pandas.pydata.org/docs/reference/api/pandas.merge.html>)
 - [join()](<https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.join.html>)
 - [concat()](<https://pandas.pydata.org/docs/reference/api/pandas.concat.html>)
-
-Add this entry to your main `pandas-methods-reference.md`:
-
-markdown
-
-```markdown
-| [Combine Data](pandas-data-combining.md) | `merge()`, `join()`, `concat()` | Combine DataFrames using columns, indexes, or rows. |
-```
