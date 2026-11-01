@@ -1,8 +1,3 @@
-Here is the simplified version with the output displayed after every example, so you can easily understand how `merge()`, `join()`, and `concat()` work.
-
-Filename: `pandas-data-combining.md`
-
-Writing
 
 # Pandas Data Combining
 
