@@ -23,19 +23,19 @@ Pandas provides several functions for importing data from different sources into
 
 | Data Source | Pandas Function | Description |
 | --- | --- | --- |
-| CSV | `pd.read_csv()` | Reads comma-separated files. |
+| CSV | [pd.read_csv()](file.md)  | Reads comma-separated files. |
 | TSV | `pd.read_csv(sep="\t")` | Reads tab-separated files. |
-| Excel | `pd.read_excel()` | Reads Excel worksheets. |
-| JSON | `pd.read_json()` | Reads JSON data. |
+| Excel |  [pd.read_excel()](file.md)  | Reads Excel worksheets. |
+| JSON |  [pd.read_json()](file.md)  | Reads JSON data. |
 | HTML | `pd.read_html()` | Extracts tables from HTML pages. |
 | XML | `pd.read_xml()` | Reads XML data. |
-| Stata | `pd.read_stata()` | Reads Stata `.dta` files. |
+| Stata | [pd.read_stata()](stat.md) | Reads Stata `.dta` files. |
 | SAS | `pd.read_sas()` | Reads SAS datasets. |
 | SPSS | `pd.read_spss()` | Reads SPSS datasets. |
 | HDF5 | `pd.read_hdf()` | Reads HDF5 datasets. |
-| SQL | `pd.read_sql()` | Reads data from SQL queries or tables. |
-| SQL Query | `pd.read_sql_query()` | Executes a SQL query and returns the results as a DataFrame. |
-| SQL Table | `pd.read_sql_table()` | Reads an entire SQL database table into a DataFrame. |
+| SQL | [pd.read_sql()](database.md) | Reads data from SQL queries or tables. |
+| SQL Query | [pd.read_sql_query()](database.md)  | Executes a SQL query and returns the results as a DataFrame. |
+| SQL Table | [pd.read_sql_table()](database.md)  | Reads an entire SQL database table into a DataFrame. |
 | Parquet | `pd.read_parquet()` | Reads Parquet files. |
 | Feather | `pd.read_feather()` | Reads Feather files. |
 | Pickle | `pd.read_pickle()` | Reads serialized pandas objects. |
