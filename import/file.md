@@ -77,10 +77,20 @@ jobs = pd.read_excel(
     sheet_name="Sheet1"
 )
 ```
-
 Replace "Sheet1" with the actual worksheet name.
 
-## 5\. General Rules for Importing Data
+## 5\. Importing an Jason File
+```
+import pandas as pd
+
+df = pd.read_json("data.json")
+
+print(df.head())
+```
+
+
+
+## 6\. General Rules for Importing Data
 
 - **Tabular data:** Pandas can usually import data directly into a DataFrame when the source has a compatible table structure.
 - **Website files:** Pass the file URL to the relevant read function.
@@ -89,7 +99,7 @@ Replace "Sheet1" with the actual worksheet name.
 - **Complex data:** Nested JSON, XML, or hierarchical files may require additional processing after importing.
 - **Missing or invalid data:** Check the imported DataFrame for missing values, incorrect data types, and unexpected column names.
 
-## 6\. Quick Reference
+## 7\. Quick Reference
 
 | Task | Example |
 | --- | --- |
