@@ -8,18 +8,18 @@ You can install Python modules using pip, Python's package installer.
 
 Use the pip install command to install the latest version available from the configured package index.
 
-
+```
 pip install pyreadstat
-
+```
 
 -**Method 2:** Install a Specific Version
 
 Use == to specify the exact package version you want to install.
 
-
+```
 pip install geopandas==0.14.3
 
-
+```
 **Note:** Installing a specific version can help maintain compatibility and reproducibility across projects.
 
 ## 2\. How to Import Python Modules
