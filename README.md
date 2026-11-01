@@ -9,7 +9,7 @@ Data analysis involves several key areas:
 ## Structure
 
 - [Data Visualization Phases](data_visualization_phases.md)
-- [Installing modules](installing_modules.md)
+- [Installing and Importing Python Modules](installing_modules.md)
 - [Python Modules and Libraries for Data Analysis](data_modules.md)
 - [Panda methods](pandas_methods.md)
 - [import_data](import_data.md)
