@@ -7,19 +7,19 @@ Data inspection is an important step in data analysis. Pandas provides several m
 
 | Method / Attribute | Type | Purpose |
 | --- | --- | --- |
-| `df.head()` | Method | Displays the first five rows by default. |
-| `df.tail()` | Method | Displays the last five rows by default. |
-| `df.sample()` | Method | Returns a random sample of rows. |
-| `df.info()` | Method | Displays column names, data types, non-null counts, and memory usage. |
-| `df.describe()` | Method | Generates descriptive statistics for numerical columns by default. |
-| `df.shape` | Attribute | Returns the number of rows and columns. |
-| `df.size` | Attribute | Returns the total number of elements. |
-| `df.ndim` | Attribute | Returns the number of dimensions. |
-| `df.columns` | Attribute | Returns the column names. |
-| `df.index` | Attribute | Returns the row index. |
-| `df.dtypes` | Attribute | Returns the data type of each column. |
-| `df.empty` | Attribute | Checks whether the DataFrame is empty. |
-| `df.memory_usage()` | Method | Returns memory usage for each column. |
+| df.head() | Method | Displays the first five rows by default. |
+| df.tail() | Method | Displays the last five rows by default. |
+| df.sample() | Method | Returns a random sample of rows. |
+| df.info() | Method | Displays column names, data types, non-null counts, and memory usage. |
+| df.describe() | Method | Generates descriptive statistics for numerical columns by default. |
+| df.shape | Attribute | Returns the number of rows and columns. |
+| df.size | Attribute | Returns the total number of elements. |
+| df.ndim | Attribute | Returns the number of dimensions. |
+| df.columns | Attribute | Returns the column names. |
+| df.index | Attribute | Returns the row index. |
+| df.dtypes | Attribute | Returns the data type of each column. |
+| df.empty | Attribute | Checks whether the DataFrame is empty. |
+| df.memory_usage() | Method | Returns memory usage for each column. |
 
 ## 2\. Previewing Data
 
@@ -27,35 +27,26 @@ Data inspection is an important step in data analysis. Pandas provides several m
 
 Displays the first five rows of a DataFrame by default.
 
-python
-
-```python
+```
 df.head()
 ```
 
 To display a specific number of rows:
 
-python
-
-```python
+```
 df.head(10)
 ```
 
 ### 2.2. tail()
 
 Displays the last five rows of a DataFrame by default.
-
-python
-
-```python
+```
 df.tail()
 ```
 
 To display the last ten rows:
 
-python
-
-```python
+```
 df.tail(10)
 ```
 
@@ -63,25 +54,19 @@ df.tail(10)
 
 Returns a random sample of rows from a DataFrame.
 
-python
-
-```python
+```
 df.sample()
 ```
 
 To return five random rows:
 
-python
-
-```python
+```
 df.sample(5)
 ```
 
 To make the random selection reproducible:
 
-python
-
-```python
+```
 df.sample(5, random_state=42)
 ```
 
@@ -91,9 +76,7 @@ df.sample(5, random_state=42)
 
 Displays a summary of the DataFrame, including column names, data types, non-null counts, and memory usage.
 
-python
-
-```python
+```
 df.info()
 ```
 
@@ -101,15 +84,13 @@ Common parameters:
 
 | Parameter | Description |
 | --- | --- |
-| `verbose=True` | Displays detailed information for all columns. |
-| `memory_usage="deep"` | Estimates memory usage more accurately, including object values. |
-| `show_counts=True` | Displays the number of non-null values in each column. |
+| verbose=True | Displays detailed information for all columns. |
+| memory_usage="deep" | Estimates memory usage more accurately, including object values. |
+| show_counts=True | Displays the number of non-null values in each column. |
 
 Example:
 
-python
-
-```python
+```
 df.info(
     verbose=True,
     memory_usage="deep",
@@ -121,14 +102,14 @@ df.info(
 
 | Output | Meaning |
 | --- | --- |
-| `RangeIndex: 12624 entries` | The DataFrame contains 12,624 rows. |
-| `Data columns (total 27 columns)` | The DataFrame contains 27 columns. |
-| `12624 non-null` | The column contains 12,624 non-missing values. |
-| `90 non-null` | The column contains 90 non-missing values. |
-| `float64` | Floating-point numerical data. |
-| `int64` | Integer numerical data. |
-| `object` | Objects, often strings or mixed values. |
-| `memory usage: 12.9 MB` | Estimated DataFrame memory usage. |
+| RangeIndex: 12624 entries | The DataFrame contains 12,624 rows. |
+| Data columns (total 27 columns) | The DataFrame contains 27 columns. |
+| 12624 non-null | The column contains 12,624 non-missing values. |
+| 90 non-null | The column contains 90 non-missing values. |
+| float64 | Floating-point numerical data. |
+| int64 | Integer numerical data. |
+| object | Objects, often strings or mixed values. |
+| memory usage: 12.9 MB | Estimated DataFrame memory usage. |
 
 ## 4\. Descriptive Statistics
 
@@ -136,9 +117,7 @@ df.info(
 
 Generates descriptive statistics for numerical columns by default.
 
-python
-
-```python
+```
 df.describe()
 ```
 
@@ -157,17 +136,13 @@ Common statistics include:
 
 To include all columns:
 
-python
-
-```python
+```
 df.describe(include="all")
 ```
 
 To summarize categorical columns:
 
-python
-
-```python
+```
 df.describe(include=["object"])
 ```
 
@@ -176,26 +151,19 @@ df.describe(include=["object"])
 ### 5.1. shape
 
 Returns the number of rows and columns as a tuple.
-
-python
-
-```python
+```
 df.shape
 ```
 
 Example output:
 
 text
-
-```text
 (12624, 27)
-```
+
 
 Access the dimensions separately:
 
-python
-
-```python
+```
 rows = df.shape[0]
 columns = df.shape[1]
 
@@ -207,35 +175,27 @@ print("Columns:", columns)
 
 Returns the total number of elements in the DataFrame.
 
-python
-
-```python
+```
 df.size
 ```
 
 Calculation:
 
-python
-
-```python
+```
 total_elements = df.shape[0] * df.shape[1]
 ```
 
 For a DataFrame with 12,624 rows and 27 columns:
 
 text
-
-```text
 12624 × 27 = 340848
-```
+
 
 ### 5.3. ndim
 
 Returns the number of dimensions.
 
-python
-
-```python
+```
 df.ndim
 ```
 
@@ -247,17 +207,13 @@ A standard pandas DataFrame has two dimensions.
 
 Returns the names of all DataFrame columns.
 
-python
-
-```python
+```
 df.columns
 ```
 
 Convert column names into a list:
 
-python
-
-```python
+```
 df.columns.tolist()
 ```
 
@@ -265,9 +221,7 @@ df.columns.tolist()
 
 Returns the row index.
 
-python
-
-```python
+```
 df.index
 ```
 
@@ -275,9 +229,7 @@ df.index
 
 Returns the data type of each column.
 
-python
-
-```python
+```
 df.dtypes
 ```
 
@@ -285,13 +237,11 @@ df.dtypes
 
 Checks whether the DataFrame is empty.
 
-python
-
-```python
+```
 df.empty
 ```
 
-Returns `True` if the DataFrame has no rows or columns.
+Returns True if the DataFrame has no rows or columns.
 
 ## 7\. Checking Memory Usage
 
@@ -299,25 +249,19 @@ Returns `True` if the DataFrame has no rows or columns.
 
 Returns the memory usage of each column.
 
-python
-
-```python
+```
 df.memory_usage()
 ```
 
 For a more detailed estimate:
 
-python
-
-```python
+```
 df.memory_usage(deep=True)
 ```
 
 Calculate the total memory usage:
 
-python
-
-```python
+```
 df.memory_usage(deep=True).sum()
 ```
 
@@ -325,27 +269,25 @@ df.memory_usage(deep=True).sum()
 
 | Task | Method / Attribute | Example |
 | --- | --- | --- |
-| Preview first rows | `head()` | `df.head()` |
-| Preview last rows | `tail()` | `df.tail()` |
-| Random sample | `sample()` | `df.sample(5)` |
-| DataFrame information | `info()` | `df.info()` |
-| Descriptive statistics | `describe()` | `df.describe()` |
-| Number of rows and columns | `shape` | `df.shape` |
-| Total number of elements | `size` | `df.size` |
-| Number of dimensions | `ndim` | `df.ndim` |
-| Column names | `columns` | `df.columns` |
-| Row index | `index` | `df.index` |
-| Column data types | `dtypes` | `df.dtypes` |
-| Check empty DataFrame | `empty` | `df.empty` |
-| Column memory usage | `memory_usage()` | `df.memory_usage()` |
+| Preview first rows | head() | df.head() |
+| Preview last rows | tail() | df.tail() |
+| Random sample | sample() | df.sample(5) |
+| DataFrame information | info() | df.info() |
+| Descriptive statistics | describe() | df.describe() |
+| Number of rows and columns | shape | df.shape |
+| Total number of elements | size | df.size |
+| Number of dimensions | ndim | df.ndim |
+| Column names | columns | df.columns |
+| Row index | index | df.index |
+| Column data types | dtypes | df.dtypes |
+| Check empty DataFrame | empty | df.empty |
+| Column memory usage | memory_usage() | df.memory_usage() |
 
 ## 9\. Recommended Data Inspection Workflow
 
 A useful starting workflow when importing a new dataset is:
 
-python
-
-```python
+```
 import pandas as pd
 
 # Import data
@@ -378,14 +320,12 @@ print(df.sample(5, random_state=42))
 
 ## 10\. Important Notes
 
-- Methods use parentheses, such as `df.head()` and `df.info()`.
-- Attributes do not use parentheses, such as `df.shape`, `df.size`, and `df.columns`.
-- `head()` and `tail()` return five rows by default.
-- `sample()` selects random rows; use `random_state` for reproducible results.
-- `describe()` summarizes numerical columns by default.
-- `info()` is particularly useful for identifying missing values and checking data types.
-- `shape` returns rows and columns, whereas `size` returns the total number of elements.
+- Methods use parentheses, such as df.head() and df.info().
+- Attributes do not use parentheses, such as df.shape, df.size, and df.columns.
+- head() and tail() return five rows by default.
+- sample() selects random rows; use random_state for reproducible results.
+- describe() summarizes numerical columns by default.
+- info() is particularly useful for identifying missing values and checking data types.
+- shape returns rows and columns, whereas size returns the total number of elements.
 
-**Purpose:** This reference provides a starting point for understanding a dataset before performing data cleaning, transformation, statistical analysis, or visualization.
 
-Save as: `pandas-data-inspection.md`
