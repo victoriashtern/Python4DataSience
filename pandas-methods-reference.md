@@ -31,7 +31,7 @@ Pandas is a Python library for data manipulation and analysis. This reference or
 | Group Data | `groupby()`, `agg()`, `aggregate()`, `transform()` | Summarize and transform groups. |
 |  [Combine Data](pandas-data-combining.md) | `merge()`, `join()`, `concat()` | Combine datasets. |
 | Reshape Data | `pivot()`, `pivot_table()`, `melt()`, `stack()`, `unstack()` | Change the layout of datasets. |
-| Index Management | `reset_index()`, `set_index()`, `reindex()` | Set, reset, and reorganize DataFrame indexes. |
+|  [Index Management](panda_index_management.md)  | `reset_index()`, `set_index()`, `reindex()` | Set, reset, and reorganize DataFrame indexes. |
 |  [Analyze Values](pandas-value-analysis.md)  | `value_counts()`, `nunique()`, `unique()`, `duplicated()`, `corr()` | Examine frequencies, uniqueness, and relationships. |
 | Handle Missing Values | `isna()`, `notna()`, `dropna()`, `fillna()`, `interpolate()` | Identify and handle missing data. |
 | Work with Strings | `str.lower()`, `str.upper()`, `str.strip()`, `str.replace()`, `str.contains()` | Clean and search text. |
