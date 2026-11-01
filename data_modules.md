@@ -1,7 +1,7 @@
 
 # Python Modules and Libraries for Data Analysis
 
-This guide summarizes Python modules and libraries commonly used in data analysis, data cleaning, statistical analysis, data visualization, machine learning, and data engineering.
+This guide provides an overview of Python modules and libraries commonly used in data analysis, data cleaning, statistical analysis, data visualization, machine learning, and data engineering.
 
 ## 1\. Data Manipulation and Numerical Computing
 
@@ -70,7 +70,7 @@ This guide summarizes Python modules and libraries commonly used in data analysi
 
 | Module / Library | Abbreviation | Purpose |
 | --- | --- | --- |
-| datetime | dt\* | Working with dates, times, and time intervals. |
+| datetime | — | Working with dates, times, and time intervals. |
 | time | — | Working with timestamps, elapsed time, and time-related operations. |
 | dateutil | — | Parsing dates and performing flexible date calculations. |
 | pandas.tseries | — | Date offsets, business calendars, and time series utilities. |
@@ -163,8 +163,6 @@ This guide summarizes Python modules and libraries commonly used in data analysi
 | multiprocessing | — | Running computations across multiple processes. |
 | pytest | — | Testing data-processing functions and Python code. |
 
-\* dt is a user-defined alias sometimes used for datetime; it is not a standard import abbreviation.
-
 ## Recommended Starting Libraries
 
 If you are learning practical data analysis, start with these libraries before moving into specialized areas:
@@ -176,7 +174,6 @@ If you are learning practical data analysis, start with these libraries before m
 5. **scikit-learn** — Predictive analysis and machine learning.
 6. **SQLAlchemy and sqlite3** — Database access.
 7. **ydata-profiling and Pandera** — Data exploration and data quality checks.
-
 
 ## Notes
 
