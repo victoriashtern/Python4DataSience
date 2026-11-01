@@ -10,7 +10,7 @@ Data analysis involves several key areas:
 
 - [Data Visualization Phases](data_visualization_phases.md)
 - [Installing and Importing Python Modules](installing_modules.md)
-- [Python Modules and Libraries for Data Analysis](data_modules.md)
+- [Python Modules and Libraries for Data Analysis](data_analysis_libraries.md)
 - [Panda methods](pandas_methods.md)
 - [import_data](import_data.md)
 - [Jason Data](json_file.md)
