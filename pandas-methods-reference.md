@@ -1,7 +1,3 @@
-Below is the revised page with sample outputs added after each code example. I've used small, consistent datasets so the results are easier to understand.
-
-Writing
-
 # Pandas Methods Reference
 
 Pandas is a Python library for data manipulation and analysis. This reference organizes commonly used pandas functions, methods, and attributes by category, with practical examples and links to official documentation.
