@@ -31,7 +31,7 @@ Pandas is a Python library for data manipulation and analysis. This reference or
 | Reshape Data | `pivot()`, `pivot_table()`, `melt()`, `stack()`, `unstack()` | Change the arrangement of rows and columns. |
 | [Index Management](/pandas/index_management.md)  | `reset_index()`, `set_index()`, `reindex()` | Set, reset, or reorganize the row index. |
 | [Analyze Values](/pandas/value-analysis.md)  | `value_counts()`, `nunique()`, `unique()`, `duplicated()`, `corr()` | Examine frequencies, unique values, duplicates, and relationships. |
-| Handle Missing Values | `isna()`, `notna()`, `dropna()`, `fillna()`, `interpolate()` | Find and handle missing data. |
+| [Missing Values](/cleaning/panda_missing_values.md)    | `isna()`, `notna()`, `dropna()`, `fillna()`, `interpolate()` | Find and handle missing data. |
 | Work with Strings | `str.lower()`, `str.upper()`, `str.strip()`, `str.replace()`, `str.contains()` | Clean and search text values. |
 | Work with Dates | `dt.year`, `dt.month`, `dt.day`, `resample()`, `shift()` | Extract date information and analyze time series. |
 | Visualize Data | `plot()`, `hist()`, `boxplot()` | Create charts and visualizations. |
