@@ -35,7 +35,7 @@ Pandas is a Python library for data manipulation and analysis. This reference or
 | Work with Strings | `str.lower()`, `str.upper()`, `str.strip()`, `str.replace()`, `str.contains()` | Clean and search text values. |
 | Work with Dates | `dt.year`, `dt.month`, `dt.day`, `resample()`, `shift()` | Extract date information and analyze time series. |
 | Visualize Data | `plot()`, `hist()`, `boxplot()` | Create charts and visualizations. |
-| Export Data | `to_csv()`, `to_excel()`, `to_json()`, `to_sql()`, `to_parquet()` | Save results in different formats. |
+| Export Data | `to_csv()`, `to_excel()`, `to_json()`, `to_sql()`, `to_parquet()`, `to_html()` | Save results in different formats. |
 
 **Important:** `loc` and `iloc` are indexers rather than methods. The `dt` accessor provides access to datetime properties and methods on Series. Functions such as `pd.read_csv()` and `pd.to_datetime()` are top-level pandas functions rather than DataFrame methods.
 
