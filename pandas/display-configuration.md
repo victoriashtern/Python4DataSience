@@ -8,10 +8,10 @@ These functions are particularly useful when working with large datasets in Jupy
 
 | Method | Description |
 | --- | --- |
-| `pd.set_option()` | Sets or changes a Pandas configuration option. |
-| `pd.get_option()` | Retrieves the current value of a configuration option. |
-| `pd.reset_option()` | Resets a configuration option to its default value. |
-| `pd.describe_option()` | Displays documentation about available configuration options. |
+| pd.set_option() | Sets or changes a Pandas configuration option. |
+| pd.get_option() | Retrieves the current value of a configuration option. |
+| pd.reset_option() | Resets a configuration option to its default value. |
+| pd.describe_option() | Displays documentation about available configuration options. |
 
 ## 2\. Syntax and Examples
 
@@ -21,17 +21,13 @@ Sets or changes a global Pandas configuration option.
 
 **Syntax:**
 
-python
-
-```python
+```
 pd.set_option(pat, value)
 ```
 
 **Examples:**
 
-python
-
-```python
+```
 import pandas as pd
 
 # Display all rows
@@ -54,13 +50,13 @@ pd.set_option('display.width', 1000)
 
 | Option | Description |
 | --- | --- |
-| `display.max_rows` | Maximum number of displayed rows. |
-| `display.max_columns` | Maximum number of displayed columns. |
-| `display.max_colwidth` | Maximum width of column content. |
-| `display.width` | Target display width in characters. |
-| `display.precision` | Number of decimal places displayed for floating-point values. |
-| `display.expand_frame_repr` | Controls whether wide DataFrames are printed across multiple lines. |
-| `display.show_dimensions` | Controls whether DataFrame dimensions are shown in truncated output. |
+| display.max_rows | Maximum number of displayed rows. |
+| display.max_columns | Maximum number of displayed columns. |
+| display.max_colwidth | Maximum width of column content. |
+| display.width | Target display width in characters. |
+| display.precision | Number of decimal places displayed for floating-point values. |
+| display.expand_frame_repr | Controls whether wide DataFrames are printed across multiple lines. |
+| display.show_dimensions | Controls whether DataFrame dimensions are shown in truncated output. |
 
 ### 2.2. pd.get\_option() – Get Configuration Options
 
@@ -68,17 +64,13 @@ Returns the current value of a specified Pandas configuration option.
 
 **Syntax:**
 
-python
-
-```python
+```
 pd.get_option(pat)
 ```
 
 **Examples:**
 
-python
-
-```python
+```
 # Get maximum displayed rows
 pd.get_option('display.max_rows')
 
@@ -94,13 +86,12 @@ pd.get_option('display.precision')
 
 **Example Output:**
 
-python
-
-```python
+```
 pd.get_option('display.max_rows')
+```
 
 60
-```
+
 
 _Note: The output depends on your Pandas version and configuration._
 
@@ -110,17 +101,14 @@ Resets a specified configuration option to its default value.
 
 **Syntax:**
 
-python
-
-```python
+```
 pd.reset_option(pat)
 ```
 
 **Examples:**
 
-python
+```
 
-```python
 # Reset maximum rows
 pd.reset_option('display.max_rows')
 
@@ -142,17 +130,13 @@ Displays information about available Pandas configuration options, including the
 
 **Syntax:**
 
-python
-
-```python
+```
 pd.describe_option(pat=None)
 ```
 
 **Examples:**
 
-python
-
-```python
+```
 # Display information about all options
 pd.describe_option()
 
@@ -167,9 +151,7 @@ pd.describe_option('display')
 
 Assume you have a DataFrame containing 100 rows and 10 columns.
 
-python
-
-```python
+```
 import pandas as pd
 
 # Create a sample DataFrame
@@ -193,22 +175,21 @@ display(df)
 
 text
 
-```text
+text
     Name  Age  Salary
 0   John   25    4000
 1   Mary   30    5000
 2  David   28    4500
 3   Anna   35    6000
 4  Peter   22    3500
-```
+
 
 _Note: The example contains five records. With these settings, Pandas will display all rows and columns rather than truncating them._
 
 ## 4\. Practical Example: Manage Configuration Settings
 
-python
+```
 
-```python
 import pandas as pd
 
 # Set display options
@@ -231,33 +212,33 @@ pd.describe_option('display.max_rows')
 
 text
 
-```text
+text
 20
 10
-```
 
-The remaining output provides documentation about the `display.max_rows` configuration option.
+
+The remaining output provides documentation about the display.max_rows configuration option.
 
 ## 5\. Quick Reference
 
 | Requirement | Function |
 | --- | --- |
-| Display all rows | `pd.set_option('display.max_rows', None)` |
-| Display all columns | `pd.set_option('display.max_columns', None)` |
-| Display full column content | `pd.set_option('display.max_colwidth', None)` |
-| Check current row setting | `pd.get_option('display.max_rows')` |
-| Reset row display setting | `pd.reset_option('display.max_rows')` |
-| Reset all display settings | `pd.reset_option('display')` |
-| View all configuration options | `pd.describe_option()` |
-| View specific configuration details | `pd.describe_option('display.max_rows')` |
+| Display all rows | pd.set_option('display.max_rows', None) |
+| Display all columns | pd.set_option('display.max_columns', None) |
+| Display full column content | pd.set_option('display.max_colwidth', None) |
+| Check current row setting | pd.get_option('display.max_rows') |
+| Reset row display setting | pd.reset_option('display.max_rows') |
+| Reset all display settings | pd.reset_option('display') |
+| View all configuration options | pd.describe_option() |
+| View specific configuration details | pd.describe_option('display.max_rows') |
 
 ## 6\. Important Notes
 
 - Configuration functions are top-level Pandas functions, not DataFrame methods.
-- `pd.set_option()` changes the configuration for the current Python session.
+- pd.set_option() changes the configuration for the current Python session.
 - Display settings affect how DataFrames and Series are presented, not the underlying dataset.
-- `None` can be used for certain display options, such as `display.max_rows`, to disable the corresponding display limit.
-- `pd.reset_option()` restores the selected option to its default value.
+- None can be used for certain display options, such as display.max_rows, to disable the corresponding display limit.
+- pd.reset_option() restores the selected option to its default value.
 - Displaying very large DataFrames may consume significant memory and make Jupyter Notebook slower.
 - Configuration options and their default values may vary between Pandas versions.
 
