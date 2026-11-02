@@ -19,25 +19,25 @@ Pandas is a Python library for data manipulation and analysis. This reference or
 
 | Category | Common Methods | Purpose |
 | --- | --- | --- |
-| [Import Data](/pandas/inspection_data.md)  | `pd.read_csv()`, `pd.read_excel()`, `pd.read_json()`, `pd.read_sql()` | Load data from files and databases. |
-| [Inspect Data](/pandas/data-inspection.md)  | `df.head()`, `df.tail()`, `df.sample()`, `df.info()`, `df.describe()`, `df.size`, `df.shape`, `df.columns` | Preview data and examine its structure, size, and column names. |
-| Select Data | `loc[]`, `iloc[]`, `query()`, `filter()` | Select specific rows and columns. |
-| [Data Cleaning](/cleaning)  | `drop()`, `dropna()`, `fillna()`, `replace()`, `drop_duplicates()` | Remove or correct unwanted data. |
-| Data Types | select_dtypes(),`astype()`, `convert_dtypes()`, `pd.to_numeric()`, `pd.to_datetime()` | Convert columns into appropriate data types. |
-| [Sort Data](/pandas/sort_data.md)  | `sort_values()`, `sort_index()`, `nlargest()`, `nsmallest()` | Sort records by values or index. |
-| Calculate Statistics | `mean()`, `median()`, `mode()`, `sum()`, `min()`, `max()`, `std()`, `var()` | Calculate statistical summaries. |
-| Group Data | `groupby()`, `agg()`, `aggregate()`, `transform()` | Group records and calculate summaries. |
-| Combine Data | `merge()`, `join()`, `concat()` | Combine datasets using common columns, indexes, or rows. |
-| Reshape Data | `pivot()`, `pivot_table()`, `melt()`, `stack()`, `unstack()` | Change the arrangement of rows and columns. |
-| [Index Management](/pandas/index_management.md)  | `reset_index()`, `set_index()`, `reindex()` | Set, reset, or reorganize the row index. |
-| [Analyze Values](/pandas/value-analysis.md)  | `value_counts()`, `nunique()`, `unique()`, `duplicated()`, `corr()` | Examine frequencies, unique values, duplicates, and relationships. |
-| [Missing Values](/cleaning/panda_missing_values.md)    | `isna()`, `notna()`, `dropna()`, `fillna()`, `interpolate()` | Find and handle missing data. |
-| Work with Strings | `str.lower()`, `str.upper()`, `str.strip()`, `str.replace()`, `str.contains()` | Clean and search text values. |
-| Work with Dates | `dt.year`, `dt.month`, `dt.day`, `resample()`, `shift()` | Extract date information and analyze time series. |
-| Visualize Data | `plot()`, `hist()`, `boxplot()`,plot(), line(), bar(),barh(),hist(),box(),area(),pie(),scatter(),hexbin(),kde(),density() | Create charts and visualizations. |
-| [Export Data](/pandas/data-export-methods.md)    | `to_csv()`, `to_excel()`, `to_json()`, `to_sql()`, `to_parquet()`, `to_html()` | Save results in different formats. |
+| [Import Data](/pandas/inspection_data.md)  | pd.read_csv(), pd.read_excel(), pd.read_json(), pd.read_sql() | Load data from files and databases. |
+| [Inspect Data](/pandas/data-inspection.md)  | df.head(), df.tail(), df.sample(), df.info(), df.describe(), df.size, df.shape, df.columns | Preview data and examine its structure, size, and column names. |
+| Select Data | loc[], iloc[], query(), filter() | Select specific rows and columns. |
+| [Data Cleaning](/cleaning)  | drop(), dropna(), fillna(), replace(), drop_duplicates() | Remove or correct unwanted data. |
+| Data Types | select_dtypes(),astype(), convert_dtypes(), pd.to_numeric(), pd.to_datetime() | Convert columns into appropriate data types. |
+| [Sort Data](/pandas/sort_data.md)  | sort_values(), sort_index(), nlargest(), nsmallest() | Sort records by values or index. |
+| Calculate Statistics | mean(), median(), mode(), sum(), min(), max(), std(), var() | Calculate statistical summaries. |
+| Group Data | groupby(), agg(), aggregate(), transform() | Group records and calculate summaries. |
+| Combine Data | merge(), join(), concat() | Combine datasets using common columns, indexes, or rows. |
+| Reshape Data | pivot(), pivot_table(), melt(), stack(), unstack() | Change the arrangement of rows and columns. |
+| [Index Management](/pandas/index_management.md)  | reset_index(), set_index(), reindex() | Set, reset, or reorganize the row index. |
+| [Analyze Values](/pandas/value-analysis.md)  | value_counts(), nunique(), unique(), duplicated(), corr() | Examine frequencies, unique values, duplicates, and relationships. |
+| [Missing Values](/cleaning/panda_missing_values.md)    | isna(), notna(), dropna(), fillna(), interpolate() | Find and handle missing data. |
+| Work with Strings | str.lower(), str.upper(), str.strip(), str.replace(), str.contains() | Clean and search text values. |
+| Work with Dates | dt.year, dt.month, dt.day, resample(), shift() | Extract date information and analyze time series. |
+| Visualize Data | plot(), hist(), boxplot(),plot(), line(), bar(),barh(),hist(),box(),area(),pie(),scatter(),hexbin(),kde(),density() | Create charts and visualizations. |
+| [Export Data](/pandas/data-export-methods.md)    | to_csv(), to_excel(), to_json(), to_sql(), to_parquet(), to_html() | Save results in different formats. |
 
-**Important:** `loc` and `iloc` are indexers rather than methods. The `dt` accessor provides access to datetime properties and methods on Series. Functions such as `pd.read_csv()` and `pd.to_datetime()` are top-level pandas functions rather than DataFrame methods.
+**Important:** loc and iloc are indexers rather than methods. The dt accessor provides access to datetime properties and methods on Series. Functions such as pd.read_csv() and pd.to_datetime() are top-level pandas functions rather than DataFrame methods.
 
 ## 3\. Detailed Examples by Topic
 
@@ -45,9 +45,7 @@ Pandas is a Python library for data manipulation and analysis. This reference or
 
 Documentation: [Input/Output Functions](<https://pandas.pydata.org/docs/reference/io.html>)
 
-python
-
-```python
+```
 import pandas as pd
 
 # Import data
@@ -76,9 +74,7 @@ Example DataFrame:
 
 Documentation: [DataFrame Reference](<https://pandas.pydata.org/docs/reference/frame.html>)
 
-python
-
-```python
+```
 # Preview data
 df.head()
 df.tail()
@@ -106,43 +102,43 @@ Assume the DataFrame contains:
 | 4 | Peter | 22 | 3500 |
 
 **Outputs:**
-
-`df.head(3)` – Displays the first three rows.
-
+```
+df.head(3) – Displays the first three rows.
+```
 text
 
-```text
+text
     name  age  salary
 0   John   25    4000
 1   Mary   30    5000
 2  David   28    4500
+
 ```
-
-`df.tail(2)` – Displays the last two rows.
-
+df.tail(2) – Displays the last two rows.
+```
 text
 
-```text
+text
     name  age  salary
 3   Anna   35    6000
 4  Peter   22    3500
+
 ```
-
-`df.sample(2)` – Displays two randomly selected rows. The result changes between executions.
-
+df.sample(2) – Displays two randomly selected rows. The result changes between executions.
+```
 text
 
-```text
+text
     name  age  salary
 1   Mary   30    5000
 4  Peter   22    3500
+
 ```
-
-`df.info()` – Displays information about columns, data types, non-null values, and memory usage.
-
+df.info() – Displays information about columns, data types, non-null values, and memory usage.
+```
 text
 
-```text
+text
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 5 entries, 0 to 4
 Data columns (total 3 columns):
@@ -151,13 +147,12 @@ Data columns (total 3 columns):
  0   name    5 non-null      object
  1   age     5 non-null      int64
  2   salary  5 non-null      int64
+
+```
+df.describe() – Displays descriptive statistics for numerical columns.
 ```
 
-`df.describe()` – Displays descriptive statistics for numerical columns.
-
 text
-
-```text
              age       salary
 count   5.000000      5.000000
 mean   28.000000   4600.000000
@@ -167,50 +162,46 @@ min    22.000000   3500.000000
 50%    28.000000   4500.000000
 75%    30.000000   5000.000000
 max    35.000000   6000.000000
+
+```
+df.shape – Returns the number of rows and columns.
 ```
 
-`df.shape` – Returns the number of rows and columns.
-
 python
-
-```python
 (5, 3)
+
+```
+df.size – Returns the total number of values (rows × columns).
 ```
 
-`df.size` – Returns the total number of values (rows × columns).
-
 python
-
-```python
 15
+
 ```
-
-`df.columns` – Returns the column names.
-
+df.columns – Returns the column names.
+```
 python
 
-```python
+```
 Index(['name', 'age', 'salary'], dtype='object')
+
+
+df.dtypes – Returns the data type of each column.
 ```
 
-`df.dtypes` – Returns the data type of each column.
 
 text
-
-```text
 name      object
 age        int64
 salary     int64
 dtype: object
-```
+
 
 ### 3.3. Data Cleaning
 
 Documentation: [Working with Missing Data](<https://pandas.pydata.org/docs/user_guide/missing_data.html>)
 
-python
-
-```python
+```
 # Example DataFrame
 df = pd.DataFrame({
     "name": ["John", "Mary", "John"],
@@ -220,85 +211,95 @@ df = pd.DataFrame({
 
 # Identify missing values
 df.isna().sum()
+```
 
 # Remove missing values
+```
 df.dropna()
+```
 
 # Replace missing values
+
+```
 df.fillna(0)
+```
 
 # Remove duplicates
+```
 df.drop_duplicates()
+```
 
 # Rename columns
+```
 df.rename(columns={"name": "employee"})
+```
 
 # Change data types
+```
 df.astype({"age": "float64"})
 ```
 
 **Outputs:**
+```
+df.isna().sum() – Counts missing values in each column.
+```
 
-`df.isna().sum()` – Counts missing values in each column.
 
 text
-
-```text
 name      0
 age       1
 salary    0
 dtype: int64
+
+```
+df.dropna() – Removes rows containing missing values.
 ```
 
-`df.dropna()` – Removes rows containing missing values.
+
 
 text
-
-```text
    name   age  salary
 0  John  25.0    4000
 2  John  25.0    4000
+
+```
+df.fillna(0) – Replaces missing values with zero.
 ```
 
-`df.fillna(0)` – Replaces missing values with zero.
 
 text
-
-```text
    name   age  salary
 0  John  25.0    4000
 1  Mary   0.0    5000
 2  John  25.0    4000
+
+```
+df.drop_duplicates() – Removes duplicate rows.
 ```
 
-`df.drop_duplicates()` – Removes duplicate rows.
 
 text
-
-```text
    name   age  salary
 0  John  25.0    4000
 1  Mary   NaN    5000
+
+```
+df.rename(columns={"name": "employee"}) – Renames a column.
 ```
 
-`df.rename(columns={"name": "employee"})` – Renames a column.
 
 text
-
-```text
   employee   age  salary
 0     John  25.0    4000
 1     Mary   NaN    5000
 2     John  25.0    4000
-```
+
 
 ### 3.4. Data Selection and Filtering
 
 Documentation: [Indexing and Selecting Data](<https://pandas.pydata.org/docs/user_guide/indexing.html>)
 
-python
-
-```python
+```
 # Select one column
 df["sales"]
 
@@ -322,67 +323,61 @@ Assume the DataFrame:
 | 2 | 2000 | 500 |
 
 **Outputs:**
-
-`df["sales"]` – Selects one column.
+```
+df["sales"] – Selects one column.
+```
 
 text
-
-```text
 0     500
 1    1500
 2    2000
 Name: sales, dtype: int64
+
+```
+df[["sales", "profit"]] – Selects two columns.
 ```
 
-`df[["sales", "profit"]]` – Selects two columns.
-
 text
-
-```text
    sales  profit
 0    500     100
 1   1500     300
 2   2000     500
+
+```
+df.loc[0:2, ["sales", "profit"]] – Selects rows using index labels and specified columns.
 ```
 
-`df.loc[0:2, ["sales", "profit"]]` – Selects rows using index labels and specified columns.
-
 text
-
-```text
    sales  profit
 0    500     100
 1   1500     300
 2   2000     500
+
+```
+df.iloc[0:2, 0:2] – Selects the first two rows and first two columns by position.
 ```
 
-`df.iloc[0:2, 0:2]` – Selects the first two rows and first two columns by position.
 
 text
-
-```text
    sales  profit
 0    500     100
 1   1500     300
+
+```
+df.query("sales > 1000") – Returns rows where sales exceed 1000.
 ```
 
-`df.query("sales > 1000")` – Returns rows where sales exceed 1000.
-
 text
-
-```text
    sales  profit
 1   1500     300
 2   2000     500
-```
+
 
 ### 3.5. Grouping and Aggregation
 
 Documentation: [GroupBy User Guide](<https://pandas.pydata.org/docs/user_guide/groupby.html>)
 
-python
-
-```python
+```
 # Calculate total sales by category
 df.groupby("category")["sales"].sum()
 
@@ -404,27 +399,26 @@ Assume the DataFrame:
 
 **Outputs:**
 
-`groupby("category")["sales"].sum()` – Calculates total sales for each category.
+```
+groupby("category")["sales"].sum() – Calculates total sales for each category.
+```
 
 text
-
-```text
 category
 A    300
 B    700
 Name: sales, dtype: int64
+
+```
+groupby().agg() – Calculates multiple summaries.
 ```
 
-`groupby().agg()` – Calculates multiple summaries.
-
 text
-
-```text
           sales  profit
 category
 A           300    30.0
 B           700    70.0
-```
+
 
 ### 3.6. Combining and Reshaping Data
 
@@ -433,9 +427,7 @@ Documentation:
 - [Merge, Join, and Concatenate](<https://pandas.pydata.org/docs/user_guide/merging.html>)
 - [Reshaping and Pivot Tables](<https://pandas.pydata.org/docs/user_guide/reshaping.html>)
 
-python
-
-```python
+```
 # Merge datasets
 merged_df = pd.merge(df1, df2, on="id")
 
@@ -452,9 +444,7 @@ pivot_df = df.pivot_table(
 
 **Example: Merge**
 
-python
-
-```python
+```
 df1 = pd.DataFrame({
     "id": [1, 2],
     "name": ["John", "Mary"]
@@ -471,19 +461,16 @@ print(merged_df)
 
 Output:
 
-text
 
-```text
+text
    id  name  salary
 0   1  John    4000
 1   2  Mary    5000
-```
+
 
 **Example: Concat**
 
-python
-
-```python
+```
 df1 = pd.DataFrame({
     "name": ["John", "Mary"]
 })
@@ -498,21 +485,18 @@ print(combined_df)
 
 Output:
 
-text
 
-```text
+text
     name
 0   John
 1   Mary
 2  David
 3   Anna
-```
+
 
 **Example: Pivot Table**
 
-python
-
-```python
+```
 pivot_df = df.pivot_table(
     index="category",
     values="sales",
@@ -525,13 +509,11 @@ print(pivot_df)
 Output:
 
 text
-
-```text
           sales
 category
 A           300
 B           700
-```
+
 
 ### 3.7. Index Management
 
@@ -543,9 +525,7 @@ Index management methods allow you to set, reset, and reorganize the index of a 
 
 Resets the DataFrame index to the default integer index.
 
-python
-
-```python
+```
 df = pd.DataFrame({
     "name": ["John", "Mary", "David"],
     "age": [25, 30, 28]
@@ -561,24 +541,21 @@ df = df.reset_index()
 df.reset_index(inplace=True)
 ```
 
-Output of `df.reset_index()`:
+Output of df.reset_index():
+
 
 text
-
-```text
    index   name  age
 0     10   John   25
 1     20   Mary   30
 2     30  David   28
-```
+
 
 By default, the original index becomes a new column.
 
 To discard the original index:
 
-python
-
-```python
+```
 new_df = df.reset_index(drop=True)
 print(new_df)
 ```
@@ -586,44 +563,37 @@ print(new_df)
 Output:
 
 text
-
-```text
     name  age
 0   John   25
 1   Mary   30
 2  David   28
-```
+
 
 **set\_index()**
 
 Sets an existing column as the DataFrame index.
 
-python
-
-```python
+```
 df = df.set_index("name")
 print(df)
 ```
 
 Output:
 
-text
 
-```text
+text
        age
 name
 John    25
 Mary    30
 David   28
-```
+
 
 **reindex()**
 
 Changes the row or column labels to match a specified index.
 
-python
-
-```python
+```
 df = pd.DataFrame({
     "name": ["John", "Mary", "David"]
 })
@@ -636,23 +606,23 @@ Output:
 
 text
 
-```text
+text
     name
 0   John
 1   Mary
 2  David
 3    NaN
-```
+
 
 **Related methods:**
 
 | Method | Purpose |
 | --- | --- |
-| `df.reset_index()` | Resets the index and preserves the old index as a column. |
-| `df.reset_index(drop=True)` | Resets the index and discards the old index. |
-| `df.set_index("column")` | Sets a column as the DataFrame index. |
-| `df.reindex()` | Changes the row or column labels to a specified index. |
-| `df.rename_axis()` | Changes the name of the index or column axis. |
+| df.reset_index() | Resets the index and preserves the old index as a column. |
+| df.reset_index(drop=True) | Resets the index and discards the old index. |
+| df.set_index("column") | Sets a column as the DataFrame index. |
+| df.reindex() | Changes the row or column labels to a specified index. |
+| df.rename_axis() | Changes the name of the index or column axis. |
 
 ### 3.8. String and Date Operations
 
@@ -661,9 +631,7 @@ Documentation:
 - [Working with Text Data](<https://pandas.pydata.org/docs/user_guide/text.html>)
 - [Time Series and Date Functionality](<https://pandas.pydata.org/docs/user_guide/timeseries.html>)
 
-python
-
-```python
+```
 df = pd.DataFrame({
     "name": [" John ", "MARY", " David "],
     "date": ["2024-01-15", "2024-02-20", "2024-03-10"]
@@ -686,20 +654,18 @@ Output:
 
 text
 
-```text
+text
     name       date  year  month
 0   john 2024-01-15  2024      1
 1   mary 2024-02-20  2024      2
 2  david 2024-03-10  2024      3
-```
+
 
 ### 3.9. Data Visualization
 
 Documentation: [Visualization Guide](<https://pandas.pydata.org/docs/user_guide/visualization.html>)
 
-python
-
-```python
+```
 # Histogram
 df["sales"].plot(kind="hist")
 
@@ -714,18 +680,18 @@ df.boxplot(column="sales")
 
 These commands generate visualizations rather than text output:
 
-- `hist()` – Displays the distribution of numerical values.
-- `scatter` – Displays the relationship between two numerical columns.
-- `boxplot()` – Displays the distribution, median, and potential outliers.
+- hist() – Displays the distribution of numerical values.
+- scatter – Displays the relationship between two numerical columns.
+- boxplot() – Displays the distribution, median, and potential outliers.
 
 ## 4\. Important Notes
 
-- The examples assume that `df` is an existing pandas DataFrame unless a new DataFrame is explicitly created.
+- The examples assume that df is an existing pandas DataFrame unless a new DataFrame is explicitly created.
 - Some operations return a new DataFrame or Series rather than modifying the original object.
-- Use `inplace=True` when an operation supports it and you want to modify the existing DataFrame directly.
-- `reset_index()` is useful after filtering, grouping, or sorting when you want to reorganize the row index.
-- `df.shape`, `df.size`, `df.columns`, and `df.dtypes` are attributes, not methods. Do not add parentheses when accessing them.
+- Use inplace=True when an operation supports it and you want to modify the existing DataFrame directly.
+- reset_index() is useful after filtering, grouping, or sorting when you want to reorganize the row index.
+- df.shape, df.size, df.columns, and df.dtypes are attributes, not methods. Do not add parentheses when accessing them.
 - Check the official documentation for the parameters, return values, and behavior of each method.
 - Available methods and behavior may vary between pandas versions.
 
-Note: The outputs are illustrative. For methods such as `sample()`, the exact results can vary between executions.
+Note: The outputs are illustrative. For methods such as sample(), the exact results can vary between executions.
