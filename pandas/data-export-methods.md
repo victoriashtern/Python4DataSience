@@ -6,12 +6,12 @@ Pandas provides several built-in methods to export or save DataFrame data into d
 
 | Method | Description | File Format |
 | --- | --- | --- |
-| `to_csv()` | Exports data into a CSV file. | `.csv` |
-| `to_excel()` | Exports data into an Excel spreadsheet. | `.xlsx` |
-| `to_json()` | Exports data into JSON format. | `.json` |
-| `to_sql()` | Saves DataFrame data into a SQL database table. | Database |
-| `to_parquet()` | Exports data into Parquet format. | `.parquet` |
-| `to_html()` | Exports data into an HTML table. | `.html` |
+| to_csv() | Exports data into a CSV file. | .csv |
+| to_excel() | Exports data into an Excel spreadsheet. | .xlsx |
+| to_json() | Exports data into JSON format. | .json |
+| to_sql() | Saves DataFrame data into a SQL database table. | Database |
+| to_parquet() | Exports data into Parquet format. | .parquet |
+| to_html() | Exports data into an HTML table. | .html |
 
 ## 2\. Syntax and Examples
 
@@ -19,9 +19,7 @@ Pandas provides several built-in methods to export or save DataFrame data into d
 
 Saves a DataFrame into a comma-separated values (CSV) file.
 
-python
-
-```python
+```
 df.to_csv('output.csv', index=False)
 ```
 
@@ -29,9 +27,7 @@ df.to_csv('output.csv', index=False)
 
 Saves a DataFrame into an Excel spreadsheet.
 
-python
-
-```python
+```
 df.to_excel('output.xlsx', index=False)
 ```
 
@@ -39,9 +35,7 @@ df.to_excel('output.xlsx', index=False)
 
 Saves a DataFrame into JavaScript Object Notation (JSON) format.
 
-python
-
-```python
+```
 df.to_json('output.json', orient='records')
 ```
 
@@ -49,9 +43,7 @@ df.to_json('output.json', orient='records')
 
 Writes DataFrame records into a table in a SQL database.
 
-python
-
-```python
+```
 from sqlalchemy import create_engine
 
 engine = create_engine('sqlite:///database.db')
@@ -63,9 +55,7 @@ df.to_sql('employees', engine, if_exists='replace', index=False)
 
 Saves a DataFrame into Parquet, a column-oriented file format commonly used for analytical workloads.
 
-python
-
-```python
+```
 df.to_parquet('output.parquet', index=False)
 ```
 
@@ -73,9 +63,7 @@ df.to_parquet('output.parquet', index=False)
 
 Converts a DataFrame into an HTML table and saves it as an HTML file.
 
-python
-
-```python
+```
 df.to_html('output.html', index=False)
 ```
 
@@ -83,24 +71,22 @@ df.to_html('output.html', index=False)
 
 | Parameter | Description |
 | --- | --- |
-| `path_or_buf` | File path or output destination. |
-| `index` | Whether to include DataFrame index. |
-| `columns` | Select specific columns to export. |
-| `header` | Include column names. |
-| `encoding` | Specify file encoding. |
-| `sep` | Specify the CSV delimiter. |
-| `mode` | File writing mode. |
-| `na_rep` | Representation for missing values. |
-| `if_exists` | SQL table behavior if it already exists. |
-| `orient` | Define JSON output structure. |
+| path_or_buf | File path or output destination. |
+| index | Whether to include DataFrame index. |
+| columns | Select specific columns to export. |
+| header | Include column names. |
+| encoding | Specify file encoding. |
+| sep | Specify the CSV delimiter. |
+| mode | File writing mode. |
+| na_rep | Representation for missing values. |
+| if_exists | SQL table behavior if it already exists. |
+| orient | Define JSON output structure. |
 
 _Note: Parameters differ depending on the export method._
 
 ## 4\. Practical Example: Exporting a DataFrame
 
-python
-
-```python
+```
 import pandas as pd
 
 data = {
@@ -123,12 +109,12 @@ df.to_html('employees.html', index=False)
 
 | Export Method | Best Use Case |
 | --- | --- |
-| `to_csv()` | Sharing data between applications |
-| `to_excel()` | Business reports and spreadsheets |
-| `to_json()` | APIs and web applications |
-| `to_sql()` | Storing data in relational databases |
-| `to_parquet()` | Big data analytics and data pipelines |
-| `to_html()` | Displaying data on websites |
+| to_csv() | Sharing data between applications |
+| to_excel() | Business reports and spreadsheets |
+| to_json() | APIs and web applications |
+| to_sql() | Storing data in relational databases |
+| to_parquet() | Big data analytics and data pipelines |
+| to_html() | Displaying data on websites |
 
 ## 6\. Important Takeaway
 
