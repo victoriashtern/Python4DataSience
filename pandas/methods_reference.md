@@ -19,7 +19,7 @@ Pandas is a Python library for data manipulation and analysis. This reference or
 
 | Category | Common Methods | Purpose |
 | --- | --- | --- |
-|Display and Configuration| pd.set_option(), pd.get_option(), pd.reset_option(),pd.describe_option()| Configure display settings and manage Pandas options. |
+| [Display and Configuration](/pandas/display-configuration.md)   | pd.set_option(), pd.get_option(), pd.reset_option(),pd.describe_option()| Configure display settings and manage Pandas options. |
 | [Import Data](/pandas/inspection_data.md)  | pd.read_csv(), pd.read_excel(), pd.read_json(), pd.read_sql() | Load data from files and databases. |
 | [Inspect Data](/pandas/data-inspection.md)  | df.head(), df.tail(), df.sample(), df.info(), df.describe(), df.size, df.shape, df.columns | Preview data and examine its structure, size, and column names. |
 | Select Data | loc[], iloc[], query(), filter() | Select specific rows and columns. |
