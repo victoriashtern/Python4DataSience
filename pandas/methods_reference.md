@@ -29,8 +29,8 @@ Pandas is a Python library for data manipulation and analysis. This reference or
 | Group Data | `groupby()`, `agg()`, `aggregate()`, `transform()` | Group records and calculate summaries. |
 | Combine Data | `merge()`, `join()`, `concat()` | Combine datasets using common columns, indexes, or rows. |
 | Reshape Data | `pivot()`, `pivot_table()`, `melt()`, `stack()`, `unstack()` | Change the arrangement of rows and columns. |
-| Index Management | `reset_index()`, `set_index()`, `reindex()` | Set, reset, or reorganize the row index. |
-| Analyze Values | `value_counts()`, `nunique()`, `unique()`, `duplicated()`, `corr()` | Examine frequencies, unique values, duplicates, and relationships. |
+| [Index Management](/pandas/index_management.md)  | `reset_index()`, `set_index()`, `reindex()` | Set, reset, or reorganize the row index. |
+| [Analyze Values](/pandas/value-analysis.md)  | `value_counts()`, `nunique()`, `unique()`, `duplicated()`, `corr()` | Examine frequencies, unique values, duplicates, and relationships. |
 | Handle Missing Values | `isna()`, `notna()`, `dropna()`, `fillna()`, `interpolate()` | Find and handle missing data. |
 | Work with Strings | `str.lower()`, `str.upper()`, `str.strip()`, `str.replace()`, `str.contains()` | Clean and search text values. |
 | Work with Dates | `dt.year`, `dt.month`, `dt.day`, `resample()`, `shift()` | Extract date information and analyze time series. |
