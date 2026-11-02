@@ -17,7 +17,7 @@ Data analysis involves several key areas:
 - [DataFrame](data_frame.md)
 - [Magic commands](magic_commands.md)
 - [data_visualization](data_visualization.md)
-- [Seaborn](seaborn.md)
+- [Seaborn](/seaborn)
 
 
 
