@@ -23,7 +23,7 @@ Pandas is a Python library for data manipulation and analysis. This reference or
 | Inspect Data | `df.head()`, `df.tail()`, `df.sample()`, `df.info()`, `df.describe()`, `df.size`, `df.shape`, `df.columns` | Preview data and examine its structure, size, and column names. |
 | Select Data | `loc[]`, `iloc[]`, `query()`, `filter()` | Select specific rows and columns. |
 | Data Cleaning | `drop()`, `dropna()`, `fillna()`, `replace()`, `drop_duplicates()` | Remove or correct unwanted data. |
-| Data Types | select_dtypes,`astype()`, `convert_dtypes()`, `pd.to_numeric()`, `pd.to_datetime()` | Convert columns into appropriate data types. |
+| Data Types | select_dtypes(),`astype()`, `convert_dtypes()`, `pd.to_numeric()`, `pd.to_datetime()` | Convert columns into appropriate data types. |
 | Sort Data | `sort_values()`, `sort_index()`, `nlargest()`, `nsmallest()` | Sort records by values or index. |
 | Calculate Statistics | `mean()`, `median()`, `mode()`, `sum()`, `min()`, `max()`, `std()`, `var()` | Calculate statistical summaries. |
 | Group Data | `groupby()`, `agg()`, `aggregate()`, `transform()` | Group records and calculate summaries. |
