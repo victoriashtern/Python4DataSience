@@ -65,17 +65,17 @@ df.select_dtypes(include=None, exclude=None)
 
 | Value | Selects |
 | --- | --- |
-| 'number' | All numeric columns |
-| 'integer' | Integer columns |
-| 'float' | Decimal columns |
-| 'int64' | 64-bit integers |
-| 'float64' | 64-bit floats |
-| 'object' | Object columns |
-| 'string' | Pandas string columns |
-| 'bool' | Boolean columns |
-| 'datetime' | Date/time columns |
-| 'timedelta' | Time differences |
-| 'category' | Categorical columns |
+| number | All numeric columns |
+| integer | Integer columns |
+| float | Decimal columns |
+| int64 | 64-bit integers |
+| float64 | 64-bit floats |
+| object | Object columns |
+| string | Pandas string columns |
+| bool | Boolean columns |
+| datetime | Date/time columns |
+| timedelta | Time differences |
+| category | Categorical columns |
 
 You can also use NumPy types such as np.number, np.integer and np.floating.
 
