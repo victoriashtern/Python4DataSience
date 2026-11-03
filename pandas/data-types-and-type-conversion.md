@@ -430,7 +430,6 @@ df['Day_Name'] = df['Date'].dt.day_name()
 | .dt.is_month_start | Check first day of month |
 | .dt.is_month_end | Check last day of month |
 
----
 
 ## 9\. Practical Example – Cleaning a Dataset
 
@@ -450,7 +449,6 @@ df = pd.DataFrame({
         '2021-11-01'
     ]
 })
-````
 
 # 1. Check original data types
 print(df.dtypes)
@@ -495,7 +493,7 @@ dtype: object
 
 The invalid Age value becomes <NA>, and the invalid date becomes NaT.
 
----
+
 
 ## 10\. Quick Revision
 
@@ -527,6 +525,3 @@ The invalid Age value becomes <NA>, and the invalid date becomes NaT.
 - [to\_numeric()](<https://pandas.pydata.org/docs/reference/api/pandas.to_numeric.html>)
 - [to\_datetime()](<https://pandas.pydata.org/docs/reference/api/pandas.to_datetime.html>)
 
----
-
-**Study tip:** Focus on understanding when to use each function, what its parameters do, and how the output changes. You do not need to memorise every parameter immediately.
