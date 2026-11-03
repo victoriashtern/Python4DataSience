@@ -11,8 +11,8 @@ Every Pandas column has a data type that identifies the kind of data it contains
 | object | General objects, often text | John |
 | string | Pandas text type | London |
 | bool | True/False | True |
-| Int64 | Nullable integer | 25, `<NA>` |
-| boolean | Nullable Boolean | True, `<NA>` |
+| Int64 | Nullable integer | 25, <NA> |
+| boolean | Nullable Boolean | True, <NA> |
 | datetime64\[ns\] | Date/time | 2025-01-10 |
 | timedelta64\[ns\] | Time difference | 5 days |
 | category | Categorical values | Male, Female |
@@ -21,28 +21,26 @@ Every Pandas column has a data type that identifies the kind of data it contains
 
 These are attributes, not functions. Do not use parentheses.
 
-python
-
-```python
+````
 df['Age'].dtype  # Check one column
 df.dtypes        # Check all columns
-```
+````
 
 Example output:
 
 text
 
-```text
+text
 Name       object
 Age         int64
 Salary    float64
 dtype: object
-```
+
 
 | Attribute | Purpose |
 | --- | --- |
-| `dtype` | Data type of one column |
-| `dtypes` | Data types of all columns |
+| dtype | Data type of one column |
+| dtypes | Data types of all columns |
 
 ---
 
@@ -52,42 +50,38 @@ dtype: object
 
 **Syntax:**
 
-python
-
-```python
+````
 df.select_dtypes(include=None, exclude=None)
-```
+````
 
 ### Parameters
 
 | Parameter | Description |
 | --- | --- |
-| `include` | Types you want to select |
-| `exclude` | Types you want to leave out |
+| include | Types you want to select |
+| exclude | Types you want to leave out |
 
 ### Common include values
 
 | Value | Selects |
 | --- | --- |
-| `'number'` | All numeric columns |
-| `'integer'` | Integer columns |
-| `'float'` | Decimal columns |
-| `'int64'` | 64-bit integers |
-| `'float64'` | 64-bit floats |
-| `'object'` | Object columns |
-| `'string'` | Pandas string columns |
-| `'bool'` | Boolean columns |
-| `'datetime'` | Date/time columns |
-| `'timedelta'` | Time differences |
-| `'category'` | Categorical columns |
+| 'number' | All numeric columns |
+| 'integer' | Integer columns |
+| 'float' | Decimal columns |
+| 'int64' | 64-bit integers |
+| 'float64' | 64-bit floats |
+| 'object' | Object columns |
+| 'string' | Pandas string columns |
+| 'bool' | Boolean columns |
+| 'datetime' | Date/time columns |
+| 'timedelta' | Time differences |
+| 'category' | Categorical columns |
 
-You can also use NumPy types such as `np.number`, `np.integer` and `np.floating`.
+You can also use NumPy types such as np.number, np.integer and np.floating.
 
 ### Example dataset
 
-python
-
-```python
+````
 import pandas as pd
 
 df = pd.DataFrame({
@@ -99,73 +93,62 @@ df = pd.DataFrame({
         '2023-01-10', '2022-05-15', '2024-03-20'
     ])
 })
-```
+````
 
 ### Examples and outputs
 
 **1\. Select numeric columns**
 
-python
-
-```python
+````
 numeric_cols = df.select_dtypes(include='number')
-```
+````
 
-Output: `Age`, `Salary`
+Output: Age, Salary
 
 **2\. Select text columns**
 
-python
-
-```python
+````
 text_cols = df.select_dtypes(include='object')
-```
+````
 
-Output: `Name`
+Output: Name
 
 **3\. Select Boolean columns**
 
-python
-
-```python
+````
 boolean_cols = df.select_dtypes(include='bool')
-```
+````
 
-Output: `Passed`
+Output: Passed
 
 **4\. Select datetime columns**
 
-python
-
-```python
+````
 date_cols = df.select_dtypes(include='datetime')
-```
+````
 
-Output: `Joining_Date`
+Output: Joining_Date
 
 **5\. Select multiple types**
 
-python
+````
 
-```python
 selected = df.select_dtypes(
     include=['int64', 'float64']
 )
-```
+````
 
-Output: `Age`, `Salary`
+Output: Age, Salary
 
 **6\. Exclude numeric columns**
 
-python
-
-```python
+````
 non_numeric = df.select_dtypes(exclude='number')
-```
+````
 
-Output: `Name`, `Passed`, `Joining_Date`
+Output: Name, Passed, Joining_Date
 
-**Remember:** `include` selects; `exclude` removes. At least one must be specified.
+**Remember:** include selects; exclude removes. At least one must be specified.
 
 ---
 
@@ -175,44 +158,40 @@ Output: `Name`, `Passed`, `Joining_Date`
 
 **Syntax:**
 
-python
-
-```python
+````
 df.astype(dtype, copy=None, errors='raise')
-```
+````
 
 ### Parameters
 
 | Parameter | Description | Possible values |
 | --- | --- | --- |
-| `dtype` | Desired data type | int, float, str, bool, string, etc. |
-| `copy` | Copy behaviour | True, False, None |
-| `errors` | Handle conversion errors | 'raise', 'ignore' |
+| dtype | Desired data type | int, float, str, bool, string, etc. |
+| copy | Copy behaviour | True, False, None |
+| errors | Handle conversion errors | 'raise', 'ignore' |
 
 ### Examples
 
-python
-
-```python
+````
 df['Age'] = df['Age'].astype('int64')
 
 df['Salary'] = df['Salary'].astype('float64')
 
 df['Name'] = df['Name'].astype('string')
-```
+````
+
 
 Convert multiple columns:
 
-python
-
-```python
+````
 df = df.astype({
     'Age': 'int64',
     'Salary': 'float64'
 })
-```
+````
 
-**Remember:** Use `astype()` when you know exactly which data type you need. Invalid values can cause errors.
+
+**Remember:** Use astype() when you know exactly which data type you need. Invalid values can cause errors.
 
 ---
 
@@ -222,9 +201,7 @@ df = df.astype({
 
 **Syntax:**
 
-python
-
-```python
+````
 df.convert_dtypes(
     infer_objects=True,
     convert_string=True,
@@ -233,29 +210,28 @@ df.convert_dtypes(
     convert_floating=True,
     dtype_backend='numpy_nullable'
 )
-```
+````
+
 
 ### Parameters
 
 | Parameter | Description |
 | --- | --- |
-| `infer_objects` | Infer better types for object columns |
-| `convert_string` | Convert suitable text columns |
-| `convert_integer` | Convert to nullable integers |
-| `convert_boolean` | Convert to nullable Boolean |
-| `convert_floating` | Convert to nullable floats |
-| `dtype_backend` | Choose nullable data type backend |
+| infer_objects | Infer better types for object columns |
+| convert_string | Convert suitable text columns |
+| convert_integer | Convert to nullable integers |
+| convert_boolean | Convert to nullable Boolean |
+| convert_floating | Convert to nullable floats |
+| dtype_backend | Choose nullable data type backend |
 
 ### Possible dtype\_backend values
 
-- `'numpy_nullable'` – Pandas nullable types (default).
-- `'pyarrow'` – PyArrow-backed types (requires PyArrow).
+- 'numpy_nullable' – Pandas nullable types (default).
+- 'pyarrow' – PyArrow-backed types (requires PyArrow).
 
 ### Example
 
-python
-
-```python
+````
 df = pd.DataFrame({
     'Age': [25, 30, None, 35],
     'Name': ['John', 'Sara', 'Mike', 'Emma']
@@ -264,19 +240,20 @@ df = pd.DataFrame({
 df = df.convert_dtypes()
 
 print(df.dtypes)
-```
+````
+
 
 Expected output:
 
 text
 
-```text
+text
 Age              Int64
 Name            string
 dtype: object
-```
 
-**Remember:** `Int64` supports missing values. `convert_dtypes()` improves types but does not generally parse arbitrary numeric text.
+
+**Remember:** Int64 supports missing values. convert_dtypes() improves types but does not generally parse arbitrary numeric text.
 
 ---
 
@@ -286,25 +263,22 @@ dtype: object
 
 **Syntax:**
 
-python
-
-```python
+````
 pd.to_numeric(arg, errors='raise', downcast=None)
-```
+````
+
 
 ### Parameters
 
 | Parameter | Description | Possible values |
 | --- | --- | --- |
-| `arg` | Data to convert | Series, list, scalar |
-| `errors` | Handle invalid values | 'raise', 'coerce', 'ignore' (deprecated) |
-| `downcast` | Reduce numeric type size | 'integer', 'signed', 'unsigned', 'float' |
+| arg | Data to convert | Series, list, scalar |
+| errors | Handle invalid values | 'raise', 'coerce', 'ignore' (deprecated) |
+| downcast | Reduce numeric type size | 'integer', 'signed', 'unsigned', 'float' |
 
 ### Example
 
-python
-
-```python
+````
 df = pd.DataFrame({
     'Marks': ['85', '90', 'ABC', '75']
 })
@@ -315,26 +289,27 @@ df['Marks'] = pd.to_numeric(
 )
 
 print(df)
-```
+````
+
 
 Output:
 
 text
 
-```text
+text
    Marks
 0   85.0
 1   90.0
 2    NaN
 3   75.0
-```
+
 
 ### Important options
 
-- `errors='raise'` – Raises an error for invalid values.
-- `errors='coerce'` – Invalid values become `NaN`.
-- `downcast='integer'` – Attempts to use a smaller integer type.
-- `downcast='float'` – Attempts to use a smaller floating-point type.
+- errors='raise' – Raises an error for invalid values.
+- errors='coerce' – Invalid values become NaN.
+- downcast='integer' – Attempts to use a smaller integer type.
+- downcast='float' – Attempts to use a smaller floating-point type.
 
 **Remember:** Use this when numbers are stored as text.
 
@@ -346,9 +321,7 @@ text
 
 **Syntax:**
 
-python
-
-```python
+````
 pd.to_datetime(
     arg,
     errors='raise',
@@ -361,104 +334,101 @@ pd.to_datetime(
     origin='unix',
     cache=True
 )
-```
+````
+
 
 ### Parameters
 
 | Parameter | Description | Common values |
 | --- | --- | --- |
-| `arg` | Data to convert | Series, list, scalar |
-| `errors` | Handle invalid dates | 'raise', 'coerce' |
-| `dayfirst` | Day before month | True, False |
-| `yearfirst` | Year before month/day | True, False |
-| `utc` | Convert/localise to UTC | True, False |
-| `format` | Specify date format | '%d-%m-%Y' |
-| `exact` | Exact format matching | True, False |
-| `unit` | Numeric timestamp unit | D, h, m, s, ms, us, ns |
-| `origin` | Reference date | 'unix' or specified date |
-| `cache` | Cache repeated dates | True, False |
+| arg | Data to convert | Series, list, scalar |
+| errors | Handle invalid dates | 'raise', 'coerce' |
+| dayfirst | Day before month | True, False |
+| yearfirst | Year before month/day | True, False |
+| utc | Convert/localise to UTC | True, False |
+| format | Specify date format | '%d-%m-%Y' |
+| exact | Exact format matching | True, False |
+| unit | Numeric timestamp unit | D, h, m, s, ms, us, ns |
+| origin | Reference date | 'unix' or specified date |
+| cache | Cache repeated dates | True, False |
 
 ### Example 1: Convert text to dates
 
-python
-
-```python
+````
 df['Date'] = pd.to_datetime(
     df['Date'],
     errors='coerce'
 )
-```
+````
 
-Invalid dates become `NaT` (Not a Time).
+
+Invalid dates become NaT (Not a Time).
 
 ### Example 2: Specify date format
 
-python
-
-```python
+````
 dates = pd.to_datetime(
     ['15-02-2025', '20-03-2025'],
     format='%d-%m-%Y'
 )
-```
+````
+
 
 ### Common date format codes
 
 | Code | Meaning |
 | --- | --- |
-| `%Y` | Four-digit year |
-| `%y` | Two-digit year |
-| `%m` | Month |
-| `%d` | Day |
-| `%H` | Hour |
-| `%M` | Minute |
-| `%S` | Second |
+| %Y | Four-digit year |
+| %y | Two-digit year |
+| %m | Month |
+| %d | Day |
+| %H | Hour |
+| %M | Minute |
+| %S | Second |
 
 ### Example 3: Convert numeric timestamps
 
-python
-
-```python
+````
 dates = pd.to_datetime(
     [0, 86400, 172800],
     unit='s'
 )
-```
+````
 
-**Remember:** Use `pd.to_datetime()` when dates are stored as text or numeric timestamps.
+
+**Remember:** Use pd.to_datetime() when dates are stored as text or numeric timestamps.
 
 ---
 
 ## 8\. Datetime .dt Accessor
 
-After converting a column to datetime, use `.dt` to extract date information.
+After converting a column to datetime, use .dt to extract date information.
 
-python
-
-```python
+````
 df['Date'] = pd.to_datetime(df['Date'])
 
 df['Year'] = df['Date'].dt.year
 df['Month'] = df['Date'].dt.month
 df['Day'] = df['Date'].dt.day
 df['Day_Name'] = df['Date'].dt.day_name()
-```
+````
+
 
 ### Common .dt attributes and methods
 
 | Attribute/Method | Purpose |
 | --- | --- |
-| `.dt.year` | Extract year |
-| `.dt.month` | Extract month |
-| `.dt.day` | Extract day |
-| `.dt.hour` | Extract hour |
-| `.dt.minute` | Extract minute |
-| `.dt.dayofweek` | Day number (Monday = 0) |
-| `.dt.day_name()` | Weekday name |
-| `.dt.month_name()` | Month name |
-| `.dt.quarter` | Quarter |
-| `.dt.is_month_start` | Check first day of month |
-| `.dt.is_month_end` | Check last day of month |
+| .dt.year | Extract year |
+| .dt.month | Extract month |
+| .dt.day | Extract day |
+| .dt.hour | Extract hour |
+| .dt.minute | Extract minute |
+| .dt.dayofweek | Day number (Monday = 0) |
+| .dt.day_name() | Weekday name |
+| .dt.month_name() | Month name |
+| .dt.quarter | Quarter |
+| .dt.is_month_start | Check first day of month |
+| .dt.is_month_end | Check last day of month |
 
 ---
 
@@ -466,9 +436,7 @@ df['Day_Name'] = df['Date'].dt.day_name()
 
 Combine the functions in a real-world example.
 
-python
-
-```python
+````
 import pandas as pd
 
 df = pd.DataFrame({
@@ -482,6 +450,7 @@ df = pd.DataFrame({
         '2021-11-01'
     ]
 })
+````
 
 # 1. Check original data types
 print(df.dtypes)
@@ -508,21 +477,23 @@ numeric_cols = df.select_dtypes(include='number')
 # 7. Check final data types
 print(df.dtypes)
 print(df)
-```
+
+````
+
 
 Expected final data types:
 
 text
 
-```text
+text
 Name                    string
 Age                      Int64
 Salary                   Int64
 Joining_Date    datetime64[ns]
 dtype: object
-```
 
-The invalid Age value becomes `<NA>`, and the invalid date becomes `NaT`.
+
+The invalid Age value becomes <NA>, and the invalid date becomes NaT.
 
 ---
 
@@ -530,23 +501,23 @@ The invalid Age value becomes `<NA>`, and the invalid date becomes `NaT`.
 
 | Function / Attribute | Purpose | Example |
 | --- | --- | --- |
-| `dtype` | Check one column's type | `df['Age'].dtype` |
-| `dtypes` | Check all column types | `df.dtypes` |
-| `select_dtypes()` | Select columns by type | `include='number'` |
-| `astype()` | Change data type | `.astype(int)` |
-| `convert_dtypes()` | Improve data types | `df.convert_dtypes()` |
-| `pd.to_numeric()` | Convert to numbers | `errors='coerce'` |
-| `pd.to_datetime()` | Convert to dates | `format='%Y-%m-%d'` |
-| `.dt` | Extract date components | `.dt.year` |
+| dtype | Check one column's type | df['Age'].dtype |
+| dtypes | Check all column types | df.dtypes |
+| select_dtypes() | Select columns by type | include='number' |
+| astype() | Change data type | .astype(int) |
+| convert_dtypes() | Improve data types | df.convert_dtypes() |
+| pd.to_numeric() | Convert to numbers | errors='coerce' |
+| pd.to_datetime() | Convert to dates | format='%Y-%m-%d' |
+| .dt | Extract date components | .dt.year |
 
 ### Important terms
 
-- `NaN` – Missing numeric value.
-- `NaT` – Missing datetime value.
-- `<NA>` – Missing value in nullable Pandas types.
-- `coerce` – Replace invalid values with missing values.
-- `downcast` – Attempt to reduce numeric storage size.
-- `nullable` – Data type that supports missing values.
+- NaN – Missing numeric value.
+- NaT – Missing datetime value.
+- <NA> – Missing value in nullable Pandas types.
+- coerce – Replace invalid values with missing values.
+- downcast – Attempt to reduce numeric storage size.
+- nullable – Data type that supports missing values.
 
 ### Official Documentation
 
