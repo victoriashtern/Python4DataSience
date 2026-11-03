@@ -67,10 +67,10 @@ These libraries complement each other. For example, Pandas and NumPy help prepar
 
 The following sections provide a structured way to learn Seaborn:
 
-1. **Seaborn Plot Types:** Explore the different visualization types and their applications.
-2. **Seaborn Parameters:** Learn how to control data, axes, colors, markers, and plot behavior.
-3. **Seaborn Graph Customization:** Learn how to customize graph layouts, titles, labels, themes, and colors.
-4. **Saving Figures:** Learn how to export visualizations into different file formats.
+1. [Plot Types](/seaborn/graph_types.md) Explore the different visualization types and their applications.
+2. [Parameters](/seaborn/parameters.md)  Learn how to control data, axes, colors, markers, and plot behavior.
+3. [Graph Customization](/seaborn/customization.md)  Learn how to customize graph layouts, titles, labels, themes, and colors.
+4. [Saving Figures](/seaborn/save.md)  Learn how to export visualizations into different file formats.
 
 
 
