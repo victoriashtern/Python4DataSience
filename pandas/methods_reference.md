@@ -24,11 +24,11 @@ Pandas is a Python library for data manipulation and analysis. This reference or
 | [Inspect Data](/pandas/data-inspection.md)  | df.head(), df.tail(), df.sample(), df.info(), df.describe(), df.size, df.shape, df.columns | Preview data and examine its structure, size, and column names. |
 | Select Data | loc[], iloc[], query(), filter() | Select specific rows and columns. |
 | [Data Cleaning](/cleaning)  | drop(), dropna(), fillna(), replace(), drop_duplicates() | Remove or correct unwanted data. |
-| Data Types | select_dtypes(),astype(), convert_dtypes(), pd.to_numeric(), pd.to_datetime() | Convert columns into appropriate data types. |
+| [Data Types](/pandas/data-types-and-type-conversion.md)  | select_dtypes(),astype(), convert_dtypes(), pd.to_numeric(), pd.to_datetime() | Convert columns into appropriate data types. |
 | [Sort Data](/pandas/sort_data.md)  | sort_values(), sort_index(), nlargest(), nsmallest() | Sort records by values or index. |
 | Calculate Statistics | mean(), median(), mode(), sum(), min(), max(), std(), var() | Calculate statistical summaries. |
 | Group Data | groupby(), agg(), aggregate(), transform() | Group records and calculate summaries. |
-|  [Combine Data](/pandas/combining_data_frames.md)  | merge(), join(), concat() | Combine datasets using common columns, indexes, or rows. |
+| [Combine Data](/pandas/combining_data_frames.md)  | merge(), join(), concat() | Combine datasets using common columns, indexes, or rows. |
 | Reshape Data | pivot(), pivot_table(), melt(), stack(), unstack() | Change the arrangement of rows and columns. |
 | [Index Management](/pandas/index_management.md)  | reset_index(), set_index(), reindex() | Set, reset, or reorganize the row index. |
 | [Analyze Values](/pandas/value-analysis.md)  | value_counts(), nunique(), unique(), duplicated(), corr() | Examine frequencies, unique values, duplicates, and relationships. |
