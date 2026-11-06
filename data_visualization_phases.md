@@ -1,5 +1,5 @@
 
-# 5 Phases of a Data Analysis and Visualization Project fff
+# 5 Phases of a Data Analysis and Visualization Project 
 
 A data analysis and visualization project typically consists of five key phases. Each phase plays an important role in transforming raw data into meaningful insights and communicating findings effectively.
 
